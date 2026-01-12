@@ -1,0 +1,17 @@
+# Quarto
+_site/
+.quarto/
+
+# Editor
+*~
+\#*\#
+.#*
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local

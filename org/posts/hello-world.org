@@ -1,0 +1,32 @@
+#+TITLE: Hello World
+#+DATE: 2026-01-11
+#+DESCRIPTION: First post on the new site
+#+CATEGORIES: meta
+
+* Hello World
+
+This is the first post on my new website, built with Quarto and org-mode.
+
+** The Workflow
+
+I write content in org-mode, my preferred authoring format. A Makefile
+converts org files to Quarto markdown using pandoc, then Quarto renders
+the site.
+
+#+begin_src bash
+make preview  # converts + renders + serves locally
+#+end_src
+
+** Why This Setup?
+
+1. *Org-mode* for writing - unmatched for literate programming and notes
+2. *Quarto* for publishing - beautiful defaults, good math/code support
+3. *Codeberg Pages* for hosting - FOSS-aligned, European hosting
+
+** What's Next
+
+I'll be sharing work on:
+
+- Operations research and optimization
+- Machine learning in production
+- The political economy of algorithms

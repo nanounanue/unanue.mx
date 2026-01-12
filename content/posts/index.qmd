@@ -1,0 +1,11 @@
+---
+title: "Posts"
+listing:
+  contents: "."
+  type: default
+  sort: "date desc"
+  categories: true
+  fields: [date, title, description, categories]
+---
+
+Articles, notes, and shorter writings on machine learning, operations research, and related topics.

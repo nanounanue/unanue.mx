@@ -1,0 +1,10 @@
+---
+title: "Projects"
+listing:
+  contents: "."
+  type: default
+  sort: "date desc"
+  fields: [date, title, description]
+---
+
+Active and past research projects.

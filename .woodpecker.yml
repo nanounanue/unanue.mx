@@ -1,0 +1,27 @@
+# Woodpecker CI configuration for unanue.mx
+# Builds org -> qmd -> HTML and deploys to Codeberg Pages
+
+when:
+  branch: main
+  event: push
+
+steps:
+  build:
+    image: ghcr.io/quarto-dev/quarto:latest
+    commands:
+      - apt-get update && apt-get install -y pandoc make
+      - make all
+      - ls -la _site/
+
+  deploy:
+    image: bitnami/git:latest
+    commands:
+      - cd _site
+      - git init
+      - git config user.name "Woodpecker CI"
+      - git config user.email "ci@codeberg.org"
+      - git add .
+      - git commit -m "Deploy from ${CI_COMMIT_SHA}"
+      - git remote add origin https://${CODEBERG_TOKEN}@codeberg.org/nanounanue/pages.git
+      - git push -f origin main
+    secrets: [codeberg_token]
