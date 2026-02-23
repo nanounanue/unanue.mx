@@ -21,7 +21,7 @@ make preview  # converts + renders + serves locally
 
 1. *Org-mode* for writing - unmatched for literate programming and notes
 2. *Quarto* for publishing - beautiful defaults, good math/code support
-3. *Codeberg Pages* for hosting - FOSS-aligned, European hosting
+3. *GitHub Pages* for hosting - free static hosting with CI/CD
 
 ** What's Next
 

@@ -1,0 +1,4 @@
+- source: project
+  github:
+    - url: https://nanounanue.github.io/unanue.mx
+      branch: gh-pages

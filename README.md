@@ -5,8 +5,8 @@ Personal website for Adolfo De Unánue — researcher in machine learning, opera
 ## Tech Stack
 
 - **Content**: Org-mode → Pandoc → Quarto
-- **Hosting**: Codeberg Pages
-- **CI/CD**: Woodpecker CI (builds on push to main)
+- **Hosting**: GitHub Pages
+- **CI/CD**: GitHub Actions (builds on push to main)
 
 ## Local Development
 
@@ -15,7 +15,7 @@ Personal website for Adolfo De Unánue — researcher in machine learning, opera
 make preview
 
 # Build for production
-make build
+make all
 ```
 
 ## License

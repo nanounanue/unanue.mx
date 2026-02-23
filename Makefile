@@ -1,12 +1,13 @@
 # Makefile for unanue.mx
 # Converts org-mode files to Quarto markdown and renders the site
+PANDOC ?= pandoc
 
 ORG_DIR := org
 CONTENT_DIR := content
 ORG_FILES := $(shell find $(ORG_DIR) -name '*.org' 2>/dev/null)
 QMD_FILES := $(patsubst $(ORG_DIR)/%.org,$(CONTENT_DIR)/%.qmd,$(ORG_FILES))
 
-.PHONY: all convert render preview clean help
+.PHONY: all convert render preview clean deploy help
 
 # Default target
 all: convert render
@@ -18,7 +19,7 @@ convert: $(QMD_FILES)
 $(CONTENT_DIR)/%.qmd: $(ORG_DIR)/%.org
 	@echo "Converting $< -> $@"
 	@mkdir -p $(dir $@)
-	pandoc $< -t markdown -o $@ --wrap=none
+	$(PANDOC) $< -t markdown -o $@ --wrap=none
 	@# Fix code blocks for Quarto (pandoc outputs ``` {.python}, Quarto needs ```{python})
 	sed -i 's/``` {\.python}/```{python}/g' $@
 	sed -i 's/``` {\.r}/```{r}/g' $@
@@ -40,6 +41,10 @@ clean:
 	@# Optionally clean converted qmd files (uncomment if desired)
 	@# rm -f $(QMD_FILES)
 
+# Deploy to GitHub Pages
+deploy: render
+	quarto publish gh-pages --no-prompt
+
 # Show help
 help:
 	@echo "Available targets:"
@@ -48,9 +53,10 @@ help:
 	@echo "  render   - Render the Quarto site"
 	@echo "  preview  - Preview site locally (hot reload)"
 	@echo "  clean    - Remove generated files"
+	@echo "  deploy   - Build and deploy to GitHub Pages"
 	@echo "  help     - Show this message"
 	@echo ""
 	@echo "Workflow:"
 	@echo "  1. Write content in org/ directory"
 	@echo "  2. Run 'make preview' to see changes"
-	@echo "  3. Commit and push to trigger CI deploy"
+	@echo "  3. Run 'make deploy' to publish"
