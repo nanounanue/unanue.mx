@@ -1,0 +1,16 @@
+[
+  {
+    "listing": "/content/papers/index.html",
+    "items": []
+  },
+  {
+    "listing": "/content/projects/index.html",
+    "items": []
+  },
+  {
+    "listing": "/content/posts/index.html",
+    "items": [
+      "/content/posts/hello-world.html"
+    ]
+  }
+]
