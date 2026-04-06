@@ -1,0 +1,8 @@
+#+TITLE: About
+#+AUTHOR: Adolfo De Unánue
+#+OPTIONS: toc:nil num:nil
+
+Adolfo De Unánue — researcher in machine learning, operations research,
+and political economy.
+
+[[file:index.html][← Home]]

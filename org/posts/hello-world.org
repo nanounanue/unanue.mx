@@ -1,32 +1,31 @@
-#+TITLE: Hello World
-#+DATE: 2026-01-11
-#+DESCRIPTION: First post on the new site
-#+CATEGORIES: meta
+#+TITLE: Hello, world
+#+DATE: 2026-04-06
+#+AUTHOR: Adolfo De Unánue
+#+OPTIONS: toc:nil num:nil
 
-* Hello World
+This site is built from Org-mode sources published through a custom
+Tufte-styled HTML backend. Footnotes in the source[fn:1] are rewritten
+at export time into Tufte-style sidenotes that appear in the wide right
+margin on desktop, and as expandable notes on mobile.
 
-This is the first post on my new website, built with Quarto and org-mode.
+The pipeline is intentionally minimal: =emacs --batch= loads
+[[file:../publish.el][=publish.el=]], which defines an =org-publish-project-alist= and a
+derived HTML backend that overrides the =footnote-reference=
+transcoder. No Quarto, no Node, no Hugo.[fn:2]
 
-** The Workflow
+* Why Tufte?
 
-I write content in org-mode, my preferred authoring format. A Makefile
-converts org files to Quarto markdown using pandoc, then Quarto renders
-the site.
+Edward Tufte's design language — wide margins for sidenotes and
+figures, ET Book serif, generous line height — is particularly well
+suited to long-form technical writing where references, caveats, and
+asides want to live next to the main text instead of interrupting it.
 
-#+begin_src bash
-make preview  # converts + renders + serves locally
-#+end_src
+[[file:../index.html][← Home]]
 
-** Why This Setup?
+* Footnotes
 
-1. *Org-mode* for writing - unmatched for literate programming and notes
-2. *Quarto* for publishing - beautiful defaults, good math/code support
-3. *GitHub Pages* for hosting - free static hosting with CI/CD
+[fn:1] Like this one. On a wide screen it will render in the right
+margin; on a narrow screen, click the superscript number to toggle it.
 
-** What's Next
-
-I'll be sharing work on:
-
-- Operations research and optimization
-- Machine learning in production
-- The political economy of algorithms
+[fn:2] The only runtime dependency in CI is Emacs itself plus the =org=
+and =htmlize= packages from ELPA.

@@ -1,6 +1,11 @@
-# Quarto
-_site/
-.quarto/
+# Build output
+public/
+
+# Emacs / Org
+.packages/
+*.elc
+.org-timestamps/
+auto-save-list/
 
 # Editor
 *~
@@ -15,5 +20,3 @@ Thumbs.db
 # Environment
 .env
 .env.local
-
-/.quarto/

@@ -1,28 +1,65 @@
-on:
-  workflow_dispatch:
-  push:
-    branches: main
+name: Publish
 
-name: Quarto Publish
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - name: Check out repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
+      - name: Install Emacs
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends emacs-nox
 
-      - name: Convert org-mode to Quarto markdown
-        run: make convert PANDOC="quarto pandoc"
-
-      - name: Render and Publish
-        uses: quarto-dev/quarto-actions/publish@v2
+      - name: Cache ELPA packages
+        uses: actions/cache@v4
         with:
-          target: gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          path: .packages
+          key: elpa-${{ runner.os }}-${{ hashFiles('publish.el') }}
+          restore-keys: |
+            elpa-${{ runner.os }}-
+
+      - name: Cache Org publish timestamps
+        uses: actions/cache@v4
+        with:
+          path: ~/.org-timestamps
+          key: org-timestamps-${{ runner.os }}-${{ github.sha }}
+          restore-keys: |
+            org-timestamps-${{ runner.os }}-
+
+      - name: Build site
+        run: emacs -Q --batch --load publish.el --funcall org-publish-all
+
+      - name: Copy CNAME into output
+        run: cp CNAME public/CNAME
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,6 @@
+#+TITLE: Papers
+#+OPTIONS: toc:nil num:nil
+
+Academic and technical papers.
+
+[[file:../index.html][← Home]]
