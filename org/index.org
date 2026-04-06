@@ -1,0 +1,22 @@
+#+TITLE: Adolfo De Unánue
+#+SUBTITLE: Machine Learning · Operations Research · Political Economy
+#+AUTHOR: Adolfo De Unánue
+#+OPTIONS: toc:nil num:nil author:nil date:nil
+
+* About
+
+I am a researcher working at the intersection of machine learning,
+operations research, and political economy. This site collects my
+writing, papers, and projects.
+
+* Sections
+
+- [[file:posts/index.html][Posts]] — chronological writing ([[file:feed.xml][RSS]], [[file:tags/index.html][tags]])
+- [[file:papers/index.html][Papers]] — academic and technical work
+- [[file:projects/index.html][Projects]] — software, data, research
+- [[file:about.html][About]]
+
+* Contact
+
+- GitHub: [[https://github.com/nanounanue][@nanounanue]]
+- GitLab: [[https://gitlab.com/nanounanue][@nanounanue]]

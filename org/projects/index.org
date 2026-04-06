@@ -1,0 +1,6 @@
+#+TITLE: Projects
+#+OPTIONS: toc:nil num:nil
+
+Software, data, and research projects.
+
+[[file:../index.html][← Home]]

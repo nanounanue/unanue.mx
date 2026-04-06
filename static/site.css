@@ -1,0 +1,65 @@
+/* unanue.mx — small overrides on top of tufte.css */
+
+/* Org wraps the document body in <article id="content" class="content"> and
+   nests each headline's content inside <div class="outline-N">/<div
+   class="outline-text-N">. Tufte CSS targets `article > p`, `article > h2`, …
+   with direct-child selectors, which would break for nested content.
+   `display: contents` makes those wrapper divs transparent for layout so the
+   Tufte direct-child rules keep working and sidenote positioning stays
+   anchored to <article>. */
+article div[class^="outline-"] { display: contents; }
+
+html { font-size: 15px; }
+
+/* Tighter title block */
+article > h1.title {
+  margin-top: 1.5rem;
+  font-weight: 400;
+}
+
+/* Org's author/date block */
+.subtitle, .author, .date {
+  font-style: italic;
+  color: #555;
+  margin: 0.25rem 0;
+}
+
+/* Table of contents */
+#table-of-contents {
+  margin: 2rem 0;
+  padding: 1rem 1.25rem;
+  background: #fafaf7;
+  border-left: 3px solid #ccc;
+  width: 55%;
+}
+#table-of-contents h2 {
+  font-size: 1rem;
+  margin-top: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+#table-of-contents ul { list-style: none; padding-left: 1rem; }
+
+/* Code blocks — Tufte CSS keeps them narrow; let them breathe. */
+pre.src, pre.example {
+  width: 55%;
+  padding: 0.75rem 1rem;
+  background: #f6f5ef;
+  border-left: 2px solid #aaa;
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+
+/* Inline code */
+code { background: #f6f5ef; padding: 0 0.2em; }
+pre code { background: transparent; padding: 0; }
+
+/* Footer */
+footer#postamble {
+  width: 55%;
+  margin-top: 4rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ccc;
+  font-size: 0.85rem;
+  color: #777;
+}
