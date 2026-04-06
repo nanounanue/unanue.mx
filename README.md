@@ -47,13 +47,39 @@ just clean     # remove build output and caches
 
 ## Writing
 
-Drop `.org` files anywhere under `org/`. Standard Org export options apply
-(`#+TITLE`, `#+DATE`, `#+AUTHOR`, `#+OPTIONS: toc:nil`, etc.).
+Drop `.org` files anywhere under `org/`. Each file becomes one HTML page
+at the same relative path in `public/`.
+
+```
+org/
+  index.org           -> /index.html
+  about.org           -> /about.html
+  posts/
+    my-post.org       -> /posts/my-post.html
+    index.org         # auto-generated; ignored in git
+  papers/
+  projects/
+```
+
+### Post front matter
+
+```org
+#+TITLE: My new post
+#+DATE: <2026-04-10>
+#+AUTHOR: Adolfo De Unánue
+#+FILETAGS: :ml:research:
+#+OPTIONS: toc:nil num:nil
+```
+
+**Write dates as Org timestamps (`<YYYY-MM-DD>`), not plain strings.**
+`org-publish-find-date` only recognizes `#+DATE` when it is a proper Org
+timestamp (`<…>` or `[…]`); plain `YYYY-MM-DD` silently falls back to
+the file's mtime. The sitemap, RSS feed, and tag pages all rely on
+timestamp dates for chronological sorting.
 
 ### Sidenotes
 
-Write regular Org footnotes; they are rewritten at export into Tufte
-sidenotes:
+Regular Org footnotes are rewritten at export into Tufte sidenotes:
 
 ```org
 This claim is suspect[fn:1] but let's roll with it.
@@ -61,8 +87,45 @@ This claim is suspect[fn:1] but let's roll with it.
 [fn:1] Explanation of why, shown in the right margin on desktop.
 ```
 
-The "Footnotes" section that Org would normally append at the bottom is
+The bottom "Footnotes" section that Org would normally append is
 suppressed — the content is inlined at the reference point instead.
+
+### Auto-generated index of posts
+
+`publish.el` runs `org-publish` with `:auto-sitemap t` on the posts
+project, generating `org/posts/index.org` on every build and publishing
+it as `/posts/index.html`. The entries are rendered as:
+
+```
+2026-04-06 — [link to post] Post title
+```
+
+sorted anti-chronologically by `#+DATE`. The file is gitignored; do
+not edit it by hand.
+
+### RSS feed
+
+Every build writes a RSS 2.0 feed to `/feed.xml`, linked from every
+page via a `<link rel="alternate">` tag in the `<head>`. Items are
+generated from every post under `org/posts/` that has a `#+DATE`,
+sorted newest-first.
+
+### Tags
+
+Declare tags per file with `#+FILETAGS:`:
+
+```org
+#+FILETAGS: :ml:research:bayes:
+```
+
+After publishing, `publish.el` walks every post, collects tags, and
+writes:
+
+- `/tags/index.html` — alphabetical list of tags with post counts
+- `/tags/<tag>.html` — all posts carrying that tag, newest first
+
+Tag pages are plain Tufte-styled HTML (not generated via Org export) to
+keep the build simple.
 
 ### Full-width figures
 

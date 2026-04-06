@@ -7,15 +7,16 @@
 
 I am a researcher working at the intersection of machine learning,
 operations research, and political economy. This site collects my
-[[file:posts/][writing]], [[file:papers/][papers]], and [[file:projects/][projects]].
+writing, papers, and projects.
 
-* Writing
+* Sections
 
-See the [[file:sitemap.html][sitemap]] for a chronological index of posts, or jump
-directly to recent work below.
+- [[file:posts/index.html][Posts]] — chronological writing ([[file:feed.xml][RSS]], [[file:tags/index.html][tags]])
+- [[file:papers/index.html][Papers]] — academic and technical work
+- [[file:projects/index.html][Projects]] — software, data, research
+- [[file:about.html][About]]
 
 * Contact
 
 - GitHub: [[https://github.com/nanounanue][@nanounanue]]
 - GitLab: [[https://gitlab.com/nanounanue][@nanounanue]]
-- Email: see [[file:about.html][about]]

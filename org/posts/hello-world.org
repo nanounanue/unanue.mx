@@ -1,6 +1,7 @@
 #+TITLE: Hello, world
-#+DATE: 2026-04-06
+#+DATE: <2026-04-06>
 #+AUTHOR: Adolfo De Unánue
+#+FILETAGS: :meta:org-mode:
 #+OPTIONS: toc:nil num:nil
 
 This site is built from Org-mode sources published through a custom
