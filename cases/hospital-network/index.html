@@ -1,0 +1,15 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Positioning Medicine Across a National Hospital Network · Adolfo De Unánue</title><meta name=description content="Adolfo De Unánue — data science, machine learning, and operations research on national-scale infrastructure."><link rel=stylesheet href=/css/main.min.3fb6736d6312382f9445bcb31d2b236de18baf74e9a36ec4a7895e355c24a4e5.css integrity="sha256-P7ZzbWMSOC+URbyzHSsjbeGLr3Tpo27Ep4leNVwkpOU="></head><body><header class=site><a class=wordmark href=/>Adolfo De Unánue</a><nav class=site><a href=/about/>About</a>
+<a href=/writing/>Writing</a>
+<a href=/research/>Research</a>
+<a href=/software/>Software</a>
+<a href=/teaching/>Teaching</a>
+<a href=/cases/ aria-current=true>Cases</a>
+<a href=/talks/>Talks</a></nav></header><main><div class=measure><article class=section><span class=kicker>Cases</span><h1>Positioning Medicine Across a National Hospital Network</h1><div class=meta-line style=margin-top:12px>June 2026</div><div class=content style=margin-top:32px><p>A public health system of national coverage — unnamed by agreement —
+runs sixty-four warehouses that supply 1,456 medical units. Critical
+medicines stocked out while others expired on the shelf: the network
+held inventory, but in the wrong places, and first-expired-first-out
+losses compounded the misallocation.</p><div class=stat-band><div class=stat><div class=n>34,592</div><div class=l>SKUs</div></div><div class=stat><div class=n>1,594</div><div class=l>network nodes</div></div><div class=stat><div class=n>7,117</div><div class=l>supply edges</div></div><div class=stat><div class=n>1,456</div><div class=l>medical units served</div></div></div><div class=case-grid><div class="label kicker">Problem</div><p>Inventory positioned by local judgment, shelf by shelf, across a network too large for judgment: shortages of critical medicines in some units coexisted with expiry losses in others.</p><div class="label kicker">Scale</div><p>Roughly 120 million pieces move through the network each month, across warehouses, the medical units they serve, and the supply points between them. At that size the policy has to be computed, not negotiated.</p><div class="label kicker">Method</div><p>Multi-echelon (s,S) and (R,S) inventory policies set by a stochastic program, with perishables handled first-expired-first-out. A digital twin replayed historical demand against every candidate policy, so service levels were measured before anything touched the field.</p><div class="label kicker">Result</div><p>The twin measured the service-level and inventory changes for each candidate policy; those figures are with the client for release review, and this page will carry them when they clear. What is public now is the method and the scale it ran at.</p></div></div></article></div></main><footer class=site><a href=/index.xml>RSS</a>
+<span class=sep>·</span>
+<a href=#>Subscribe</a>
+<span class=sep>·</span>
+<a href=mailto:adolfo@unanue.mx>adolfo@unanue.mx</a></footer></body></html>
