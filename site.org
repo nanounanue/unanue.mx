@@ -107,6 +107,69 @@ Course material lands here when the public course repository opens.
 Anonymized case studies: the problem, the scale, the method, and the
 result — with the client unnamed by design.
 
+** Fewer Unproductive Moves at a Container Terminal
+:PROPERTIES:
+:EXPORT_FILE_NAME: container-terminal
+:EXPORT_DATE: 2026-04-06
+:END:
+
+Most yard moves at a container terminal earn nothing: containers are
+dug out, re-stacked, and shuffled aside to reach others. At the
+terminal in the study, three of every four movements were
+unproductive, and about half of those traced to pre-clearance service
+requests — the administrative /previo/ a customs broker asks for,
+distinct from formal customs inspection — that arrive with little
+warning [cite:@villalobos2026container].
+
+#+begin_export html
+<div class="stat-band">
+  <div class="stat"><div class="n">75&thinsp;%</div><div class="l">precision, service prediction (top-300)</div></div>
+  <div class="stat"><div class="n">80&thinsp;%</div><div class="l">recall, vs 30&thinsp;% under operating rules</div></div>
+  <div class="stat"><div class="n">13–23&thinsp;%</div><div class="l">estimated fewer handling operations</div></div>
+</div>
+<div class="case-grid">
+  <div class="label kicker">Problem</div>
+  <p>The terminal's operating rules flagged which containers would request pre-clearance service with 25&thinsp;% precision and 30&thinsp;% recall — most service requests arrived as surprises, and every surprise meant digging a container out of a stack built without it in mind.</p>
+  <div class="label kicker">Scale</div>
+  <p>A real terminal's complete operational history, with consignees deduplicated across naming variants and cargo described by its HS classification. All figures below come from the published preprint, evaluated with temporal validation — each model tested only on months it never saw.</p>
+  <div class="label kicker">Method</div>
+  <p>Two supervised models: which containers will request pre-clearance service, and how long each container will dwell in the yard. Features draw on consignee history and cargo classification rather than weather-and-seasonality generalities.</p>
+  <div class="label kicker">Result</div>
+  <p>Service prediction reached 75&thinsp;% precision and up to 80&thinsp;% recall on the top-300 ranking, against 25&thinsp;% and 30&thinsp;% for the rules in force; the preprint estimates that placement informed by these models avoids 13&thinsp;% to 23&thinsp;% of total handling operations (arXiv:2604.06251, §7.5). The next step — the optimizer that turns predictions into yard positions and gate appointments — is what the models exist for.</p>
+</div>
+#+end_export
+
+** Positioning Medicine Across a National Hospital Network
+:PROPERTIES:
+:EXPORT_FILE_NAME: hospital-network
+:EXPORT_DATE: 2026-06-30
+:END:
+
+A public health system of national coverage — unnamed by agreement —
+runs sixty-four warehouses that supply 1,456 medical units. Critical
+medicines stocked out while others expired on the shelf: the network
+held inventory, but in the wrong places, and first-expired-first-out
+losses compounded the misallocation.
+
+#+begin_export html
+<div class="stat-band">
+  <div class="stat"><div class="n">34,592</div><div class="l">SKUs</div></div>
+  <div class="stat"><div class="n">1,594</div><div class="l">network nodes</div></div>
+  <div class="stat"><div class="n">7,117</div><div class="l">supply edges</div></div>
+  <div class="stat"><div class="n">1,456</div><div class="l">medical units served</div></div>
+</div>
+<div class="case-grid">
+  <div class="label kicker">Problem</div>
+  <p>Inventory positioned by local judgment, shelf by shelf, across a network too large for judgment: shortages of critical medicines in some units coexisted with expiry losses in others.</p>
+  <div class="label kicker">Scale</div>
+  <p>Roughly 120 million pieces move through the network each month, across warehouses, the medical units they serve, and the supply points between them. At that size the policy has to be computed, not negotiated.</p>
+  <div class="label kicker">Method</div>
+  <p>Multi-echelon (s,S) and (R,S) inventory policies set by a stochastic program, with perishables handled first-expired-first-out. A digital twin replayed historical demand against every candidate policy, so service levels were measured before anything touched the field.</p>
+  <div class="label kicker">Result</div>
+  <p>The twin measured the service-level and inventory changes for each candidate policy; those figures are with the client for release review, and this page will carry them when they clear. What is public now is the method and the scale it ran at.</p>
+</div>
+#+end_export
+
 * Talks
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: talks
