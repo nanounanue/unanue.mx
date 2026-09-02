@@ -1,0 +1,11 @@
+<div class="pub">
+  <a class="title" href="{{ with .Params.url_override }}{{ . }}{{ else }}{{ .RelPermalink }}{{ end }}">{{ .Title }}</a>
+  <div class="meta">
+    {{ with .Params.venue }}<span>{{ . }}</span><span class="sep">·</span>{{ end }}
+    {{ with .Params.status }}<span>{{ . }}</span>{{ end }}
+    {{ with .Params.arxiv }}<span class="sep">·</span><a href="https://arxiv.org/abs/{{ . }}">arXiv:{{ . }}</a>{{ end }}
+    {{ with .Params.doi }}<span class="sep">·</span><a href="https://doi.org/{{ . }}">doi:{{ . }}</a>{{ end }}
+    {{ with .Params.pdf }}<span class="sep">·</span><a href="{{ . }}">PDF</a>{{ end }}
+    {{ with .Params.code }}<span class="sep">·</span><a href="{{ . }}">code</a>{{ end }}
+  </div>
+</div>

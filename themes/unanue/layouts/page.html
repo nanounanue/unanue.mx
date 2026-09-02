@@ -1,6 +1,10 @@
 {{ define "main" }}
-<article>
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-</article>
+<div class="measure">
+  <article class="section">
+    {{ with .Section }}<span class="kicker">{{ title . }}</span>{{ end }}
+    <h1>{{ .Title }}</h1>
+    {{ if not .Date.IsZero }}<div class="meta-line" style="margin-top: 12px;">{{ .Date.Format "January 2006" }}</div>{{ end }}
+    <div class="content" style="margin-top: 32px;">{{ .Content }}</div>
+  </article>
+</div>
 {{ end }}

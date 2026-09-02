@@ -1,4 +1,20 @@
 {{ define "main" }}
-<h1>{{ site.Title }}</h1>
-{{ .Content }}
+<div class="measure home">
+  <h1>Adolfo De Unánue</h1>
+  <div class="content">{{ .Content }}</div>
+  <div class="rule"></div>
+  <div class="latest">
+    <span class="kicker">Writing</span>
+    {{ $posts := first 3 (where site.RegularPages "Section" "writing").ByDate.Reverse }}
+    {{ if $posts }}
+    <div class="entries">
+      {{ range $posts }}
+      {{ partial "entry.html" . }}
+      {{ end }}
+    </div>
+    {{ else }}
+    <p class="section intro" style="color: var(--muted); font-size: 15px; margin-top: 12px;">The first pieces arrive with the site.</p>
+    {{ end }}
+  </div>
+</div>
 {{ end }}

@@ -21,9 +21,10 @@ national-scale infrastructure.
 
 I build decision systems for port terminals, hospital supply chains,
 and electoral networks — and write about what they optimize. The work
-has one through-line: *objective functions encode political choices*.
-A model that allocates scarce capacity decides who waits; that
-decision deserves daylight, not a footnote.
+has one through-line: @@html:<mark>@@objective functions encode
+political choices@@html:</mark>@@. A model that allocates scarce
+capacity decides who waits; that decision deserves daylight, not a
+footnote.
 
 * About
 :PROPERTIES:
@@ -54,9 +55,29 @@ Essays and posts. The first pieces arrive with the site.
 Preprints, software papers, and work in review. Entries link the
 artifacts that exist so far — PDF, repository, or both.
 
-The first entry: a preprint on predicting container service
-requirements and dwell times to reduce unproductive moves
-[cite:@villalobos2026container].
+** Toward Reducing Unproductive Container Moves: Predicting Service Requirements and Dwell Times
+:PROPERTIES:
+:EXPORT_FILE_NAME: container-moves
+:EXPORT_DATE: 2026-04-06
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "arXiv" :status "preprint" :arxiv "2604.06251" :pdf "https://arxiv.org/pdf/2604.06251"
+:END:
+
+Two models over a container terminal's operational data: which
+containers will request pre-clearance service, and how long each will
+dwell in the yard. Evaluated with temporal validation against the
+terminal's operating rules; the paper estimates a reduction of 13 % to
+23 % of total handling operations [cite:@villalobos2026container].
+
+** Thirteen Theses on Machine Learning
+:PROPERTIES:
+:EXPORT_FILE_NAME: thirteen-theses
+:EXPORT_DATE: 2026-05-27
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "arXiv" :status "under review" :arxiv "2605.21785" :pdf "https://arxiv.org/pdf/2605.21785"
+:END:
+
+Thirteen numbered theses on what the field optimizes, for whom, and
+what it refuses to count. Under review; the preprint stays citable
+throughout.
 
 * Software
 :PROPERTIES:

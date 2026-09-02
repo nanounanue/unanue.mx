@@ -1,0 +1,45 @@
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Emacs
+        run: sudo apt-get update && sudo apt-get install -y emacs-nox
+
+      - name: Set up Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.165.0"
+          extended: true
+
+      - name: Cache export packages
+        uses: actions/cache@v4
+        with:
+          path: tools/elpa
+          key: elpa-${{ hashFiles('tools/install-packages.el') }}
+
+      - name: Install export packages
+        run: emacs --batch -l tools/install-packages.el
+
+      - name: Export org to content
+        run: emacs --batch -l tools/export.el
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Publish to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public

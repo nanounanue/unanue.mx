@@ -1,0 +1,7 @@
+<div class="entry">
+  <div class="date">{{ .Date.Format "Jan 2006" }}</div>
+  <div class="body">
+    <a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ with .Description }}<div class="deck">{{ . }}</div>{{ end }}
+  </div>
+</div>

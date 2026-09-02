@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="monograph">
+  <div class="toc">
+    <span class="kicker">Contents</span>
+    {{ .TableOfContents }}
+  </div>
+  <article>
+    {{ with .Section }}<span class="kicker">{{ title . }}</span>{{ end }}
+    <h1>{{ .Title }}</h1>
+    {{ if not .Date.IsZero }}<div class="meta-line">{{ .Date.Format "January 2006" }}</div>{{ end }}
+    <div class="content" style="margin-top: 28px;">{{ .Content }}</div>
+  </article>
+</div>
+{{ end }}

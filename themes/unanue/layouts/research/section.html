@@ -1,11 +1,11 @@
 {{ define "main" }}
-<div class="measure section">
+<div class="measure section" style="max-width: 760px;">
   <h1>{{ .Title }}</h1>
   <div class="intro">{{ .Content }}</div>
   {{ if .Pages }}
-  <div class="entries" style="margin-top: 28px;">
+  <div style="margin-top: 28px;">
     {{ range .Pages.ByDate.Reverse }}
-    {{ partial "entry.html" . }}
+    {{ partial "publication.html" . }}
     {{ end }}
   </div>
   {{ end }}

@@ -4,26 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ if not .IsHome }}{{ .Title }} · {{ end }}{{ site.Title }}</title>
-<style>
-  :root { --paper:#FBF9F3; --ink:#0B1F3B; --body:#26303C; --muted:#6A6355; --gold:#8A6D1F; --gold-bright:#C9A83C; --hair:#EAE3D2; --hl:#FFF3B0; }
-  @media (prefers-color-scheme: dark) {
-    :root { --paper:#14171E; --ink:#E8E4DA; --body:#C9CDD6; --muted:#9AA0AE; --gold:#D9AB4A; --gold-bright:#D9AB4A; --hair:#262B37; --hl:#3A3320; }
-  }
-  body { margin:0; background:var(--paper); color:var(--body); font-family:"Iowan Old Style",Palatino,"Palatino Linotype","Book Antiqua",Georgia,serif; line-height:1.7; font-size:18px; }
-  header.site { display:flex; justify-content:space-between; align-items:baseline; padding:26px 56px; border-bottom:1px solid var(--hair); flex-wrap:wrap; gap:12px; }
-  .wordmark { color:var(--ink); font-weight:600; text-decoration:none; }
-  nav.site { display:flex; gap:26px; font-family:system-ui,-apple-system,sans-serif; font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; flex-wrap:wrap; }
-  nav.site a { color:var(--muted); text-decoration:none; }
-  nav.site a[aria-current="true"] { color:var(--gold); border-bottom:1px solid var(--gold-bright); padding-bottom:2px; }
-  main { max-width:42rem; margin:0 auto; padding:64px 24px; }
-  h1,h2,h3 { color:var(--ink); line-height:1.25; letter-spacing:-0.01em; }
-  a { color:var(--ink); text-decoration-thickness:1px; text-underline-offset:3px; }
-  a:hover { color:var(--gold); }
-  mark { background:var(--hl); color:var(--body); padding:0 3px; }
-  footer.site { border-top:1px solid var(--hair); padding:22px 56px; display:flex; justify-content:center; align-items:baseline; gap:18px; font-family:ui-monospace,'SF Mono',Menlo,monospace; font-size:12.5px; }
-  footer.site a { color:var(--muted); text-decoration:none; }
-  footer.site span { color:var(--hair); }
-</style>
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Title }} — data science, machine learning, and operations research on national-scale infrastructure.{{ end }}">
+{{ with .OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">{{ end }}
+{{ with resources.Get "css/main.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
+{{ end }}
 </head>
 <body>
 <header class="site">
@@ -37,9 +22,9 @@
 <main>{{ block "main" . }}{{ end }}</main>
 <footer class="site">
   <a href="/index.xml">RSS</a>
-  <span>·</span>
+  <span class="sep">·</span>
   <a href="#">Subscribe</a>
-  <span>·</span>
+  <span class="sep">·</span>
   <a href="mailto:adolfo@unanue.mx">adolfo@unanue.mx</a>
 </footer>
 </body>
