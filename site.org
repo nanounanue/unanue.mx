@@ -1,0 +1,95 @@
+#+title: unanue.mx
+#+author: Adolfo De Unánue
+#+date: <2026-09-02 Wed>
+#+language: en
+#+hugo_base_dir: .
+#+options: author:nil
+#+bibliography: references.bib
+#+cite_export: csl
+
+Source of the site: one subtree per page, exported with ox-hugo
+(=just build=). The theme lives in =themes/unanue/=.
+
+* Home
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: /
+:EXPORT_FILE_NAME: _index
+:END:
+
+Data science, machine learning, and operations research on
+national-scale infrastructure.
+
+I build decision systems for port terminals, hospital supply chains,
+and electoral networks — and write about what they optimize. The work
+has one through-line: *objective functions encode political choices*.
+A model that allocates scarce capacity decides who waits; that
+decision deserves daylight, not a footnote.
+
+* About
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: about
+:EXPORT_FILE_NAME: _index
+:END:
+
+I work where optimization meets public infrastructure: ports, hospital
+supply chains, electoral networks. Every objective function in those
+systems encodes a political choice about who waits and who is served
+first; my work is to make that choice explicit, measurable, and open
+to argument.
+
+* Writing
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: writing
+:EXPORT_FILE_NAME: _index
+:END:
+
+Essays and posts. The first pieces arrive with the site.
+
+* Research
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: research
+:EXPORT_FILE_NAME: _index
+:END:
+
+Preprints, software papers, and work in review. Entries link the
+artifacts that exist so far — PDF, repository, or both.
+
+The first entry: a preprint on predicting container service
+requirements and dwell times to reduce unproductive moves
+[cite:@villalobos2026container].
+
+* Software
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: software
+:EXPORT_FILE_NAME: _index
+:END:
+
+- [[https://github.com/ccd-ia/triage-pg][triage-pg]] — early-warning ML pipelines native to PostgreSQL
+  ([[https://ccd-ia.github.io/triage-pg/][docs]]).
+- [[https://github.com/ccd-ia/featurizer][featurizer]] — Deep Feature Synthesis compiled to SQL
+  ([[https://ccd-ia.github.io/featurizer/][docs]]).
+
+* Teaching
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: teaching
+:EXPORT_FILE_NAME: _index
+:END:
+
+Course material lands here when the public course repository opens.
+
+* Cases
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: cases
+:EXPORT_FILE_NAME: _index
+:END:
+
+Anonymized case studies: the problem, the scale, the method, and the
+result — with the client unnamed by design.
+
+* Talks
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: talks
+:EXPORT_FILE_NAME: _index
+:END:
+
+Conference talks and their materials.

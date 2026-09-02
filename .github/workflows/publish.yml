@@ -1,28 +1,15 @@
+# Retired Quarto publish workflow. The Quarto scaffold lives in
+# archive/quarto/; the ox-hugo pipeline replaces it (see tools/ and
+# justfile). This file stays manual-only so it never runs on push; the
+# Hugo deploy workflow will replace it when the theme lands.
 on:
   workflow_dispatch:
-  push:
-    branches: main
 
-name: Quarto Publish
+name: Quarto Publish (retired)
 
 jobs:
-  build-deploy:
+  retired:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-
-      - name: Convert org-mode to Quarto markdown
-        run: make convert PANDOC="quarto pandoc"
-
-      - name: Render and Publish
-        uses: quarto-dev/quarto-actions/publish@v2
-        with:
-          target: gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Explain retirement
+        run: echo "This workflow is retired. The site builds with ox-hugo + Hugo; see the justfile."

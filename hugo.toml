@@ -1,0 +1,10 @@
+baseURL = "https://unanue.mx/"
+languageCode = "en"
+title = "Adolfo De Unánue"
+theme = "unanue"
+enableRobotsTXT = true
+
+[markup]
+  [markup.goldmark.renderer]
+    # ox-hugo emits raw HTML for org constructs; goldmark must keep it
+    unsafe = true

@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    body { margin: 0; background: #FBF9F3; font-family: "Iowan Old Style", Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif; -webkit-font-smoothing: antialiased; }
+    p { text-wrap: pretty; }
+    a { color: #0B1F3B; text-decoration: underline; text-decoration-color: #CBB26A; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: #8A6D1F; }
+  </style>
+</helmet>
+<div style="width: 1440px; min-height: 1980px; background: #FBF9F3; box-sizing: border-box; display: flex; flex-direction: column">
+
+  <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 26px 56px; border-bottom: 1px solid #EAE3D2">
+    <div style="font-size: 16px; color: #0B1F3B; font-weight: 600; letter-spacing: 0.01em">Adolfo De Unánue</div>
+    <div style="display: flex; gap: 26px; font-family: system-ui, -apple-system, sans-serif; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase">
+      <a href="#" style="color: #85806F; text-decoration: none">About</a>
+      <a href="#" style="color: #8A6D1F; text-decoration: none; border-bottom: 1px solid #C9A83C; padding-bottom: 2px">Writing</a>
+      <a href="#" style="color: #85806F; text-decoration: none">Research</a>
+      <a href="#" style="color: #85806F; text-decoration: none">Software</a>
+      <a href="#" style="color: #85806F; text-decoration: none">Teaching</a>
+      <a href="#" style="color: #85806F; text-decoration: none">Cases</a>
+      <a href="#" style="color: #85806F; text-decoration: none">Talks</a>
+    </div>
+  </div>
+
+  <div style="flex-grow: 1; display: grid; grid-template-columns: 220px 630px 220px; gap: 56px; justify-content: center; padding: 64px 40px 72px">
+
+    <div style="position: sticky; top: 40px; align-self: start; display: flex; flex-direction: column; gap: 12px; padding-top: 110px">
+      <div style="font-family: system-ui, -apple-system, sans-serif; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #85806F; font-weight: 600; margin-bottom: 4px">Contents</div>
+      <a href="#" style="font-size: 14.5px; color: #8A6D1F; text-decoration: none; line-height: 1.4">On compression</a>
+      <a href="#" style="font-size: 14.5px; color: #85806F; text-decoration: none; line-height: 1.4">Ashby&rsquo;s law, stated plainly</a>
+      <a href="#" style="font-size: 14.5px; color: #85806F; text-decoration: none; line-height: 1.4">What language models keep</a>
+      <a href="#" style="font-size: 14.5px; color: #85806F; text-decoration: none; line-height: 1.4">The political reading</a>
+    </div>
+
+    <div style="display: flex; flex-direction: column">
+      <div style="font-family: system-ui, -apple-system, sans-serif; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #8A6D1F; font-weight: 600">Essay</div>
+      <h1 style="margin: 12px 0 0; font-size: 40px; line-height: 1.18; font-weight: 600; color: #0B1F3B; letter-spacing: -0.01em">LLMs Are Variety Preservers</h1>
+      <div style="margin: 16px 0 0; font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 12.5px; color: #97917F">November 2026</div>
+
+      <h2 style="margin: 40px 0 0; font-size: 25px; line-height: 1.3; font-weight: 600; color: #0B1F3B">On compression</h2>
+      <p style="margin: 18px 0 0; font-size: 18.5px; line-height: 1.8; color: #26303C">Machine learning, as practiced, is the art of throwing information away. A classifier maps the world&rsquo;s states onto a handful of labels; a risk score collapses a life onto a scalar. This is not a defect — compression is what makes action possible — but it has a price, and the price has a name. Cybernetics gave it one seventy years ago.<sup style="color: #8A6D1F; font-size: 12px">1</sup></p>
+
+      <h2 style="margin: 44px 0 0; font-size: 25px; line-height: 1.3; font-weight: 600; color: #0B1F3B">Ashby&rsquo;s law, stated plainly</h2>
+      <p style="margin: 18px 0 0; font-size: 18.5px; line-height: 1.8; color: #26303C">A regulator holds outcomes steady only if it can match, move for move, the variety of the disturbances that reach it. Written as capacities:</p>
+      <div style="margin: 30px 0; text-align: center; font-size: 21px; color: #0B1F3B; font-style: italic; letter-spacing: 0.02em">V(O)&thinsp;&#8805;&thinsp;V(D)&thinsp;&#8722;&thinsp;V(R)</div>
+      <p style="margin: 0; font-size: 18.5px; line-height: 1.8; color: #26303C">Whatever variety the regulator cannot absorb passes through to the outcomes. No cleverness gets around the inequality; there is only moving capacity from one side to the other.</p>
+
+      <h2 style="margin: 44px 0 0; font-size: 25px; line-height: 1.3; font-weight: 600; color: #0B1F3B">What language models keep</h2>
+      <p style="margin: 18px 0 0; font-size: 18.5px; line-height: 1.8; color: #26303C">A conventional model fixes its output space before it sees the world: the labels are chosen, the score is bounded, the variety budget is spent at design time. A language model does something structurally different — its output space is the language itself, the highest-variety channel humans operate.<sup style="color: #8A6D1F; font-size: 12px">2</sup> It can answer with a distinction nobody asked it to make. That is what it means to preserve variety: the map keeps degrees of freedom the territory may yet need.</p>
+
+      <figure style="margin: 40px 0 0; display: flex; flex-direction: column; gap: 14px; padding: 0">
+        <svg viewBox="0 0 660 220" width="660" height="220" role="img" aria-label="Ashby's regulator: disturbances, regulator, outcomes">
+          <defs>
+            <marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+              <path d="M0 0 L8 4 L0 8 z" fill="#0B1F3B"></path>
+            </marker>
+          </defs>
+          <rect x="24" y="70" width="160" height="84" fill="none" stroke="#0B1F3B" stroke-width="1.5"></rect>
+          <text x="104" y="106" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#0B1F3B">Disturbances</text>
+          <text x="104" y="128" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="13" fill="#97917F">V(D)</text>
+          <rect x="264" y="70" width="150" height="84" fill="none" stroke="#C9A83C" stroke-width="2"></rect>
+          <text x="339" y="106" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#0B1F3B">Regulator</text>
+          <text x="339" y="128" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="13" fill="#97917F">V(R)</text>
+          <rect x="494" y="70" width="142" height="84" fill="none" stroke="#0B1F3B" stroke-width="1.5"></rect>
+          <text x="565" y="106" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#0B1F3B">Outcomes</text>
+          <text x="565" y="128" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="13" fill="#97917F">V(O)</text>
+          <line x1="184" y1="88" x2="256" y2="88" stroke="#0B1F3B" stroke-width="1.2" marker-end="url(#arr)"></line>
+          <line x1="184" y1="112" x2="256" y2="112" stroke="#0B1F3B" stroke-width="1.2" marker-end="url(#arr)"></line>
+          <line x1="184" y1="136" x2="256" y2="136" stroke="#0B1F3B" stroke-width="1.2" marker-end="url(#arr)"></line>
+          <line x1="414" y1="112" x2="486" y2="112" stroke="#0B1F3B" stroke-width="1.2" marker-end="url(#arr)"></line>
+          <text x="220" y="52" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" letter-spacing="1" fill="#85806F">VARIETY IN</text>
+          <text x="450" y="52" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" letter-spacing="1" fill="#85806F">WHAT PASSES THROUGH</text>
+        </svg>
+        <figcaption style="font-size: 14px; color: #6A6355; line-height: 1.55; border-left: 2px solid #C9A83C; padding-left: 14px">Figure 1 — The regulator survives only by matching the variety of its environment. Compression below that line is paid in outcomes.</figcaption>
+      </figure>
+
+      <h2 style="margin: 44px 0 0; font-size: 25px; line-height: 1.3; font-weight: 600; color: #0B1F3B">The political reading</h2>
+      <p style="margin: 18px 0 0; font-size: 18.5px; line-height: 1.8; color: #26303C">Here the argument turns. When a model compresses, someone chose what survives the compression — and that choice is an objective function wearing a technical costume. <mark style="background: #FFF3B0; color: #26303C; padding: 0 3px">Objective functions encode political choices.</mark> A system that preserves variety keeps those choices open a little longer; a system that destroys it forecloses them silently. Which of the two you deploy is not an engineering detail.</p>
+    </div>
+
+    <div style="display: flex; flex-direction: column; padding-top: 110px">
+      <div style="margin-top: 250px; font-size: 13.5px; line-height: 1.6; color: #6A6355; border-top: 1px solid #E2DAC6; padding-top: 10px"><span style="color: #8A6D1F">1.</span>&nbsp;W. Ross Ashby, <em>An Introduction to Cybernetics</em> (1956), ch. 11: the law of requisite variety.</div>
+      <div style="margin-top: 360px; font-size: 13.5px; line-height: 1.6; color: #6A6355; border-top: 1px solid #E2DAC6; padding-top: 10px"><span style="color: #8A6D1F">2.</span>&nbsp;The claim concerns the class of maps a model can express after training, not its parameter count.</div>
+    </div>
+
+  </div>
+
+  <div style="border-top: 1px solid #EAE3D2; padding: 22px 56px; display: flex; justify-content: center; align-items: baseline; gap: 18px; font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 12.5px">
+    <a href="#" style="color: #85806F; text-decoration: none">RSS</a>
+    <span style="color: #CFC8B4">·</span>
+    <a href="#" style="color: #85806F; text-decoration: none">Subscribe</a>
+    <span style="color: #CFC8B4">·</span>
+    <a href="#" style="color: #85806F; text-decoration: none">adolfo@unanue.mx</a>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    body { margin: 0; background: #FBF9F3; font-family: "Iowan Old Style", Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif; -webkit-font-smoothing: antialiased; }
+    p { text-wrap: pretty; }
+    a { color: #0B1F3B; text-decoration: underline; text-decoration-color: #CBB26A; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: #8A6D1F; }
+  </style>
+</helmet>
+<div style="width: 1440px; min-height: 1320px; background: #FBF9F3; box-sizing: border-box; display: flex; flex-direction: column">
+
+  <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 26px 56px; border-bottom: 1px solid #EAE3D2">
+    <div style="font-size: 16px; color: #0B1F3B; font-weight: 600; letter-spacing: 0.01em">Adolfo De Unánue</div>
+    <div style="display: flex; gap: 26px; font-family: system-ui, -apple-system, sans-serif; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase">
+      <a href="#" style="color: #85806F; text-decoration: none">About</a>
+      <a href="#" style="color: #85806F; text-decoration: none">Writing</a>
+      <a href="#" style="color: #85806F; text-decoration: none">Research</a>
+      <a href="#" style="color: #85806F; text-decoration: none">Software</a>
+      <a href="#" style="color: #85806F; text-decoration: none">Teaching</a>
+      <a href="#" style="color: #8A6D1F; text-decoration: none; border-bottom: 1px solid #C9A83C; padding-bottom: 2px">Cases</a>
+      <a href="#" style="color: #85806F; text-decoration: none">Talks</a>
+    </div>
+  </div>
+
+  <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; padding: 64px 56px 56px">
+    <div style="max-width: 800px; width: 800px; display: flex; flex-direction: column">
+      <div style="font-family: system-ui, -apple-system, sans-serif; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #8A6D1F; font-weight: 600">Case study</div>
+      <h1 style="margin: 12px 0 0; font-size: 38px; line-height: 1.2; font-weight: 600; color: #0B1F3B; letter-spacing: -0.01em">Positioning Medicine Across a National Hospital Network</h1>
+      <p style="margin: 16px 0 0; font-size: 17px; line-height: 1.6; color: #6A6355; font-style: italic">The client — a public health system of national coverage — is unnamed by design. The numbers are real.</p>
+
+      <div style="margin: 44px 0 0; display: flex; border-top: 1px solid #E2DAC6; border-bottom: 1px solid #E2DAC6">
+        <div style="flex: 1; padding: 24px 20px; display: flex; flex-direction: column; gap: 6px">
+          <div style="font-size: 38px; line-height: 1; color: #0B1F3B; font-weight: 600">34,592</div>
+          <div style="font-family: system-ui, -apple-system, sans-serif; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #85806F">SKUs</div>
+        </div>
+        <div style="flex: 1; padding: 24px 20px; border-left: 1px solid #E2DAC6; display: flex; flex-direction: column; gap: 6px">
+          <div style="font-size: 38px; line-height: 1; color: #0B1F3B; font-weight: 600">1,594</div>
+          <div style="font-family: system-ui, -apple-system, sans-serif; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #85806F">Network nodes</div>
+        </div>
+        <div style="flex: 1; padding: 24px 20px; border-left: 1px solid #E2DAC6; display: flex; flex-direction: column; gap: 6px">
+          <div style="font-size: 38px; line-height: 1; color: #0B1F3B; font-weight: 600">7,117</div>
+          <div style="font-family: system-ui, -apple-system, sans-serif; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #85806F">Supply edges</div>
+        </div>
+        <div style="flex: 1; padding: 24px 20px; border-left: 1px solid #E2DAC6; display: flex; flex-direction: column; gap: 6px">
+          <div style="font-size: 38px; line-height: 1; color: #0B1F3B; font-weight: 600">1,456</div>
+          <div style="font-family: system-ui, -apple-system, sans-serif; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #85806F">Medical units served</div>
+        </div>
+      </div>
+
+      <div style="margin: 48px 0 0; display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 36px 44px">
+        <div style="font-family: system-ui, -apple-system, sans-serif; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #8A6D1F; font-weight: 600; padding-top: 5px">Problem</div>
+        <p style="margin: 0; font-size: 17.5px; line-height: 1.72; color: #26303C">Sixty-four warehouses supply 1,456 medical units across the country. Critical medicines stocked out while others expired on the shelf — the network held inventory, but in the wrong places, and first-expired-first-out losses compounded the misallocation.</p>
+
+        <div style="font-family: system-ui, -apple-system, sans-serif; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #8A6D1F; font-weight: 600; padding-top: 5px">Scale</div>
+        <p style="margin: 0; font-size: 17.5px; line-height: 1.72; color: #26303C">Roughly 120 million pieces move through the network each month, across 1,594 nodes — the warehouses, the medical units they serve, and the supply points between them. At that size no planner positions inventory by judgment; the policy has to be computed, not negotiated shelf by shelf.</p>
+
+        <div style="font-family: system-ui, -apple-system, sans-serif; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #8A6D1F; font-weight: 600; padding-top: 5px">Method</div>
+        <p style="margin: 0; font-size: 17.5px; line-height: 1.72; color: #26303C">Multi-echelon (s,S) and (R,S) inventory policies set by a stochastic program, with perishables handled first-expired-first-out. A digital twin replayed historical demand against every candidate policy, so service levels were measured before anything touched the field.</p>
+
+        <div style="font-family: system-ui, -apple-system, sans-serif; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #8A6D1F; font-weight: 600; padding-top: 5px">Result</div>
+        <p style="margin: 0; font-size: 17.5px; line-height: 1.72; color: #26303C">The twin measured [SERVICE-LEVEL GAIN] at [INVENTORY REDUCTION] across replications; final figures await the client&rsquo;s review of the published draft. What is already public is the method and the scale it ran at.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="border-top: 1px solid #EAE3D2; padding: 22px 56px; display: flex; justify-content: center; align-items: baseline; gap: 18px; font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 12.5px">
+    <a href="#" style="color: #85806F; text-decoration: none">RSS</a>
+    <span style="color: #CFC8B4">·</span>
+    <a href="#" style="color: #85806F; text-decoration: none">Subscribe</a>
+    <span style="color: #CFC8B4">·</span>
+    <a href="#" style="color: #85806F; text-decoration: none">adolfo@unanue.mx</a>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

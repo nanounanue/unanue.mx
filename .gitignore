@@ -1,4 +1,14 @@
-# Quarto
+# Hugo
+public/
+.hugo_build.lock
+
+# ox-hugo (generated from site.org — never edit content/ by hand)
+content/
+
+# Project-local Emacs packages (reinstalled by `just setup`)
+tools/elpa/
+
+# Quarto (retired; scaffold archived in archive/quarto/)
 _site/
 .quarto/
 
