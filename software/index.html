@@ -1,13 +1,30 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Software · Adolfo De Unánue</title><meta name=description content="Adolfo De Unánue — data science, machine learning, and operations research on national-scale infrastructure."><link rel=alternate type=application/rss+xml href=https://unanue.mx/software/index.xml title="Adolfo De Unánue"><link rel=stylesheet href=/css/main.min.3fb6736d6312382f9445bcb31d2b236de18baf74e9a36ec4a7895e355c24a4e5.css integrity="sha256-P7ZzbWMSOC+URbyzHSsjbeGLr3Tpo27Ep4leNVwkpOU="></head><body><header class=site><a class=wordmark href=/>Adolfo De Unánue</a><nav class=site><a href=/about/>About</a>
+<!doctype html><html lang=en class=no-js><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><title>Software · Adolfo De Unánue</title><meta name=description content="Adolfo De Unánue — data science, machine learning, and operations research on national-scale infrastructure."><link rel=alternate type=application/rss+xml href=https://unanue.mx/software/index.xml title="Adolfo De Unánue"><link rel=stylesheet href=/css/main.min.7c62d4477b149cba92b920ddc126c978917982189c1024c2e60ccfd36e93d89d.css integrity="sha256-fGLUR3sUnLqSuSDdwSbJeJF5ghicECTC5gzP026T2J0="><script>(function(){var e,t=document.documentElement;t.classList.remove("no-js");try{e=localStorage.getItem("theme"),(e==="dark"||e==="light")&&t.setAttribute("data-theme",e)}catch{}})()</script><script>window.location.host!=="unanue.mx"&&(window.goatcounter={no_onload:!0})</script><script data-goatcounter=https://nanounanue.goatcounter.com/count async src=//gc.zgo.at/count.js></script></head><body><header class=site><a class=wordmark href=/>Adolfo De Unánue</a><div class=site-right><nav class=site><a href=/about/>About</a>
 <a href=/writing/>Writing</a>
 <a href=/research/>Research</a>
 <a href=/software/ aria-current=true>Software</a>
 <a href=/teaching/>Teaching</a>
 <a href=/cases/>Cases</a>
-<a href=/talks/>Talks</a></nav></header><main><div class="measure section"><h1>Software</h1><div class=intro><ul><li><a href=https://github.com/ccd-ia/triage-pg>triage-pg</a> — early-warning ML pipelines native to PostgreSQL
-(<a href=https://ccd-ia.github.io/triage-pg/>docs</a>).</li><li><a href=https://github.com/ccd-ia/featurizer>featurizer</a> — Deep Feature Synthesis compiled to SQL
-(<a href=https://ccd-ia.github.io/featurizer/>docs</a>).</li></ul></div></div></main><footer class=site><a href=/index.xml>RSS</a>
+<a href=/talks/>Talks</a></nav><button type=button class=theme-toggle data-theme-toggle>Auto</button>
+<script>(function(){var t,n=document.documentElement,e=document.querySelector("[data-theme-toggle]");if(!e)return;t=["auto","light","dark"];function s(){try{var e=localStorage.getItem("theme");return e==="light"||e==="dark"?e:"auto"}catch{return"auto"}}function o(t){t==="auto"?n.removeAttribute("data-theme"):n.setAttribute("data-theme",t),e.textContent=t.charAt(0).toUpperCase()+t.slice(1),e.setAttribute("aria-label","Colour theme: "+t+". Activate to change."),e.title="Colour theme: "+t}o(s()),e.addEventListener("click",function(){var e=t[(t.indexOf(s())+1)%t.length];try{localStorage.setItem("theme",e)}catch{}o(e)})})()</script></div></header><main><div class="measure section" style=max-width:760px><h1>Software</h1><div class=intro><p>Released packages, with the license, version and documentation each one
+ships. DOIs and software papers appear here as Zenodo and JOSS issue
+them.</p></div><div style=margin-top:28px><div class=pkg><a class=title href=https://github.com/ccd-ia/triage-pg>triage-pg</a><div class=deck><p>Early-warning machine learning pipelines that run inside PostgreSQL. A
+fork of the University of Chicago&rsquo;s Triage in which cohorts, labels,
+features, temporal cross-validation and model governance are all
+expressed as SQL against the database that already holds the data, so a
+pipeline moves to production without leaving it.</p></div><div class=meta><span>Python + SQL</span>
+<span class=sep>·</span><span>MIT</span>
+<span class=sep>·</span><span>v1.1.4</span>
+<span class=sep>·</span><a href=https://github.com/ccd-ia/triage-pg>repo</a>
+<span class=sep>·</span><a href=https://ccd-ia.github.io/triage-pg/>docs</a></div><div class=pkg-for><span class=kicker>Built for</span> Case triage at a state prosecutor’s office; early-warning pilots in health and education.</div></div><div class=pkg><a class=title href=https://github.com/ccd-ia/featurizer>featurizer</a><div class=deck><p>Deep Feature Synthesis compiled to SQL. Given a relational schema and an
+entity graph, it generates the point-in-time-correct feature matrix as
+queries the database runs itself, so the database computes each feature
+as of a date rather than joining it after the fact.</p></div><div class=meta><span>Python + SQL</span>
+<span class=sep>·</span><span>Apache-2.0</span>
+<span class=sep>·</span><span>v1.1.1</span>
+<span class=sep>·</span><a href=https://github.com/ccd-ia/featurizer>repo</a>
+<span class=sep>·</span><a href=https://ccd-ia.github.io/featurizer/>docs</a>
+<span class=sep>·</span><a href=https://doi.org/10.5281/zenodo.22287185>doi:10.5281/zenodo.22287185</a></div><div class=pkg-for><span class=kicker>Built for</span> The feature layer under the triage-pg pipelines above.</div></div></div></div></main><footer class=site><a href=/index.xml>RSS</a>
 <span class=sep>·</span>
-<a href=#>Subscribe</a>
+<a href=https://nanounanue.substack.com/subscribe>Subscribe</a>
 <span class=sep>·</span>
 <a href=mailto:adolfo@unanue.mx>adolfo@unanue.mx</a></footer></body></html>
