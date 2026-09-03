@@ -1,0 +1,45 @@
+{{- /* Turns Goldmark's bottom-of-page footnotes into margin sidenotes.
+
+       Takes rendered content HTML, returns it with every
+         <sup id="fnref:N"><a href="#fn:N" …>N</a></sup>
+       replaced by a numbered label, a hidden checkbox and the note body
+       inline at the reference point, and the trailing .footnotes block
+       removed. CSS floats the body into the margin on wide screens and the
+       checkbox reveals it inline on narrow ones — no JavaScript.
+
+       Authoring stays plain Org: [fn:: text] or a named footnote. Notes
+       should be a single paragraph; a multi-paragraph note is left alone.
+
+       If any reference fails to splice, the original content is returned
+       unchanged and the notes stay at the bottom, which is a correct page. */ -}}
+
+{{- $orig := . -}}
+{{- $c := . -}}
+{{- $notes := findRE `(?s)<li id="fn:[^"]+">.*?</li>` $c -}}
+
+{{- range $notes -}}
+  {{- $li := . -}}
+  {{- $id := index (findRE `fn:[^"]+` $li 1) 0 -}}
+  {{- $num := replace $id "fn:" "" -}}
+
+  {{- /* body: drop the <li> wrapper, the backref link and a lone <p> */ -}}
+  {{- $body := replaceRE `(?s)^<li id="fn:[^"]+">\s*(.*?)\s*</li>$` "$1" $li -}}
+  {{- $body = replaceRE `(?s)(?:&#160;|&nbsp;|\s)*<a href="#fnref:[^"]+" class="footnote-backref"[^>]*>.*?</a>` "" $body -}}
+  {{- $body = replaceRE `(?s)^<p>(.*)</p>$` "$1" $body -}}
+
+  {{- if not (findRE `<p>|<div|<ol|<ul|<blockquote|<pre` $body 1) -}}
+    {{- $sups := findRE (printf `<sup id="fnref:%s">.*?</sup>` $num) $c 1 -}}
+    {{- with $sups -}}
+      {{- $sn := printf `<label for="sn-%s" class="sn-num" role="doc-noteref">%s</label><input type="checkbox" id="sn-%s" class="sn-toggle"><span class="sidenote" role="doc-footnote"><span class="sn-n">%s.</span>&nbsp;%s</span>` $num $num $num $num $body -}}
+      {{- $c = replace $c (index . 0) $sn -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if findRE `<sup id="fnref:` $c 1 -}}
+  {{- /* at least one note did not splice: keep the page as Goldmark built it */ -}}
+  {{- $c = $orig -}}
+{{- else -}}
+  {{- $c = replaceRE `(?s)<div class="footnotes" role="doc-endnotes">.*?</div>\s*` "" $c -}}
+{{- end -}}
+{{- $c | safeHTML -}}

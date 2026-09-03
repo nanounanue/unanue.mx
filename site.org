@@ -38,6 +38,10 @@ systems encodes a political choice about who waits and who is served
 first; my work is to make that choice explicit, measurable, and open
 to argument.
 
+Positions, training and a selected record of the work are on the
+[[/cv/][CV page]]. Write to
+[[mailto:adolfo@unanue.mx][adolfo@unanue.mx]].
+
 * Writing
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: writing
@@ -49,17 +53,40 @@ Essays and posts. The first pieces arrive with the site.
 * Research
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: research
+:END:
+
+** Research
+:PROPERTIES:
 :EXPORT_FILE_NAME: _index
 :END:
 
-Preprints, software papers, and work in review. Entries link the
-artifacts that exist so far — PDF, repository, or both.
+Two bodies of work: machine learning for public policy since 2017, and
+theoretical physics before that. Entries link the canonical artifact —
+DOI where one exists, arXiv otherwise.
+
+** Designing AI for Prosecutorial Governance: Case Prioritization and Statutory Oversight in Mexico
+:PROPERTIES:
+:EXPORT_FILE_NAME: prosecutorial-governance
+:EXPORT_DATE: 2026-01-02
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "arXiv" :status "preprint" :group "ml" :arxiv "2601.00396" :pdf "https://arxiv.org/pdf/2601.00396" :deck "Case triage and statutory oversight in a state prosecutor's office." :url_override "https://arxiv.org/abs/2601.00396"
+:END:
+
+** Machine Learning as Performative Materialist Practice: Thirteen Theses on the Epistemology, Methodology, and Politics of Applied ML
+:PROPERTIES:
+:EXPORT_FILE_NAME: thirteen-theses
+:EXPORT_DATE: 2026-05-27
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "arXiv" :status "under review" :group "ml" :arxiv "2605.21785" :pdf "https://arxiv.org/pdf/2605.21785" :deck "Thirteen numbered theses on what the field optimizes, for whom, and what it refuses to count." :url_override "https://arxiv.org/abs/2605.21785"
+:END:
+
+Thirteen numbered theses on what the field optimizes, for whom, and
+what it refuses to count. Under review; the preprint stays citable
+throughout.
 
 ** Toward Reducing Unproductive Container Moves: Predicting Service Requirements and Dwell Times
 :PROPERTIES:
 :EXPORT_FILE_NAME: container-moves
 :EXPORT_DATE: 2026-04-06
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "arXiv" :status "preprint" :arxiv "2604.06251" :pdf "https://arxiv.org/pdf/2604.06251"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "arXiv" :status "preprint" :group "ml" :arxiv "2604.06251" :pdf "https://arxiv.org/pdf/2604.06251" :deck "Two models over a container terminal's operational data, evaluated with temporal validation." :url_override "https://arxiv.org/abs/2604.06251"
 :END:
 
 Two models over a container terminal's operational data: which
@@ -68,27 +95,170 @@ dwell in the yard. Evaluated with temporal validation against the
 terminal's operating rules; the paper estimates a reduction of 13 % to
 23 % of total handling operations [cite:@villalobos2026container].
 
-** Thirteen Theses on Machine Learning
+** Primetime Satan: Fear-Based Media Exposure, Moral Panic, and Electoral Behavior
 :PROPERTIES:
-:EXPORT_FILE_NAME: thirteen-theses
-:EXPORT_DATE: 2026-05-27
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "arXiv" :status "under review" :arxiv "2605.21785" :pdf "https://arxiv.org/pdf/2605.21785"
+:EXPORT_FILE_NAME: primetime-satan
+:EXPORT_DATE: 2026-01-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "EGAP Working Paper" :status "working paper" :group "ml" :deck "Fear-based media exposure and its effect on electoral behavior." :url_override "https://EconPapers.repec.org/RePEc:gnt:wpaper:32"
 :END:
 
-Thirteen numbered theses on what the field optimizes, for whom, and
-what it refuses to count. Under review; the preprint stays citable
-throughout.
+** Cognitive modeling for understanding interactions between people and decision support tools in complex and uncertain environments: A study protocol
+:PROPERTIES:
+:EXPORT_FILE_NAME: cognitive-modeling
+:EXPORT_DATE: 2023-10-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "PLOS ONE" :status "published" :group "ml" :doi "10.1371/journal.pone.0290683" :url_override "https://doi.org/10.1371/journal.pone.0290683"
+:END:
+
+** Current research trends on cognition, integrative complexity, and decision-making: a systematic literature review using activity theory and neuroscience
+:PROPERTIES:
+:EXPORT_FILE_NAME: cognition-review
+:EXPORT_DATE: 2023-04-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Frontiers in Psychology" :status "published" :group "ml" :doi "10.3389/fpsyg.2023.1156696" :url_override "https://doi.org/10.3389/fpsyg.2023.1156696"
+:END:
+
+** A recommendation and risk classification system for connecting rough sleepers to essential outreach services
+:PROPERTIES:
+:EXPORT_FILE_NAME: rough-sleepers
+:EXPORT_DATE: 2021-01-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Data & Policy" :status "published" :group "ml" :doi "10.1017/dap.2020.23" :arxiv "2007.15326" :url_override "https://doi.org/10.1017/dap.2020.23"
+:END:
+
+** Predictive Analytics for Retention in Care in an Urban HIV Clinic
+:PROPERTIES:
+:EXPORT_FILE_NAME: hiv-retention
+:EXPORT_DATE: 2020-04-14
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Scientific Reports" :status "published" :group "ml" :doi "10.1038/s41598-020-62729-x" :url_override "https://doi.org/10.1038/s41598-020-62729-x"
+:END:
+
+** A Machine Learning System for Retaining Patients in HIV Care
+:PROPERTIES:
+:EXPORT_FILE_NAME: hiv-ml-system
+:EXPORT_DATE: 2020-06-08
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "arXiv" :status "preprint" :group "ml" :arxiv "2006.04944" :pdf "https://arxiv.org/pdf/2006.04944" :url_override "https://arxiv.org/abs/2006.04944"
+:END:
+
+** An experience-centered approach to training effective data scientists
+:PROPERTIES:
+:EXPORT_FILE_NAME: training-data-scientists
+:EXPORT_DATE: 2019-12-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Big Data" :status "published" :group "ml" :doi "10.1089/big.2019.0100" :arxiv "1905.06875" :url_override "https://doi.org/10.1089/big.2019.0100"
+:END:
+
+** Deploying Machine Learning Models for Public Policy: A Framework
+:PROPERTIES:
+:EXPORT_FILE_NAME: deploying-ml-public-policy
+:EXPORT_DATE: 2018-07-19
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "ACM SIGKDD (KDD)" :status "published" :group "ml" :doi "10.1145/3219819.3219911" :url_override "https://doi.org/10.1145/3219819.3219911"
+:END:
+
+** Improving Government Response to Citizen Requests Online
+:PROPERTIES:
+:EXPORT_FILE_NAME: citizen-requests
+:EXPORT_DATE: 2018-06-20
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "ACM COMPASS" :status "published" :group "ml" :doi "10.1145/3209811.3209872" :url_override "https://doi.org/10.1145/3209811.3209872"
+:END:
+
+** Applying Machine Learning Methods to Enhance the Distribution of Social Services in Mexico
+:PROPERTIES:
+:EXPORT_FILE_NAME: social-services-mexico
+:EXPORT_DATE: 2017-09-16
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "arXiv" :status "preprint" :group "ml" :arxiv "1709.05551" :pdf "https://arxiv.org/pdf/1709.05551" :url_override "https://arxiv.org/abs/1709.05551"
+:END:
+
+** Extracción de variables a partir de datos no estructurados para generación de redes
+:PROPERTIES:
+:EXPORT_FILE_NAME: extraccion-variables
+:EXPORT_DATE: 2014-01-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Conference paper" :status "published" :group "ml" :doi "10.13140/2.1.3378.8161" :url_override "https://doi.org/10.13140/2.1.3378.8161"
+:END:
+
+** Revisión de la teoría de perturbaciones en Relatividad General
+:PROPERTIES:
+:EXPORT_FILE_NAME: perturbaciones-rg
+:EXPORT_DATE: 2011-08-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Revista Mexicana de Física" :status "published" :group "physics" :pdf "https://www.scielo.org.mx/pdf/rmf/v57n4/v57n4a1.pdf" :url_override "https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S0035-001X2011000400001"
+:END:
+
+** Multiple quantum collapse of the inflaton field and its implications on the birth of cosmic structure
+:PROPERTIES:
+:EXPORT_FILE_NAME: multiple-quantum-collapse
+:EXPORT_DATE: 2011-08-07
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Classical and Quantum Gravity" :status "published" :group "physics" :doi "10.1088/0264-9381/28/15/155010" :arxiv "1012.2419" :url_override "https://doi.org/10.1088/0264-9381/28/15/155010"
+:END:
+
+** The quantum origins of the cosmological asymmetry
+:PROPERTIES:
+:EXPORT_FILE_NAME: quantum-origins-thesis
+:EXPORT_DATE: 2010-10-27
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "PhD thesis, UNAM" :status "thesis" :group "physics" :arxiv "1010.5765" :pdf "https://arxiv.org/pdf/1010.5765" :url_override "https://arxiv.org/abs/1010.5765"
+:END:
+
+** A window to quantum gravity phenomena in the emergence of the seeds of cosmic structure
+:PROPERTIES:
+:EXPORT_FILE_NAME: window-quantum-gravity
+:EXPORT_DATE: 2009-01-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Journal of Physics: Conference Series" :status "published" :group "physics" :doi "10.1088/1742-6596/174/1/012059" :arxiv "0901.2884" :url_override "https://doi.org/10.1088/1742-6596/174/1/012059"
+:END:
+
+** The seeds of cosmic structure: A phenomenological approach
+:PROPERTIES:
+:EXPORT_FILE_NAME: seeds-cosmic-structure
+:EXPORT_DATE: 2008-12-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "AIP Conference Proceedings" :status "published" :group "physics" :doi "10.1063/1.3058573" :url_override "https://doi.org/10.1063/1.3058573"
+:END:
+
+** Phenomenological analysis of quantum collapse as source of the seeds of cosmic structure
+:PROPERTIES:
+:EXPORT_FILE_NAME: phenomenological-collapse
+:EXPORT_DATE: 2008-08-11
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Physical Review D" :status "published" :group "physics" :doi "10.1103/PhysRevD.78.043510" :arxiv "0801.4702" :url_override "https://doi.org/10.1103/PhysRevD.78.043510"
+:END:
+
+** The neutron as an alternative explanation for the trans-GZK cosmic rays
+:PROPERTIES:
+:EXPORT_FILE_NAME: neutron-gzk
+:EXPORT_DATE: 2007-11-10
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Modern Physics Letters A" :status "published" :group "physics" :doi "10.1142/S0217732307022943" :arxiv "hep-ph/0605239" :url_override "https://doi.org/10.1142/S0217732307022943"
+:END:
 
 * Software
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: software
+:END:
+
+** Software
+:PROPERTIES:
 :EXPORT_FILE_NAME: _index
 :END:
 
-- [[https://github.com/ccd-ia/triage-pg][triage-pg]] — early-warning ML pipelines native to PostgreSQL
-  ([[https://ccd-ia.github.io/triage-pg/][docs]]).
-- [[https://github.com/ccd-ia/featurizer][featurizer]] — Deep Feature Synthesis compiled to SQL
-  ([[https://ccd-ia.github.io/featurizer/][docs]]).
+Released packages, with the license, version and documentation each one
+ships. DOIs and software papers appear here as Zenodo and JOSS issue
+them.
+
+** triage-pg
+:PROPERTIES:
+:EXPORT_FILE_NAME: triage-pg
+:EXPORT_DATE: 2026-08-26
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :lang "Python + SQL" :license "MIT" :version "1.1.4" :repo "https://github.com/ccd-ia/triage-pg" :docs "https://ccd-ia.github.io/triage-pg/" :built_for "Case triage at a state prosecutor’s office; early-warning pilots in health and education."
+:END:
+
+Early-warning machine learning pipelines that run inside PostgreSQL. A
+fork of the University of Chicago's Triage in which cohorts, labels,
+features, temporal cross-validation and model governance are all
+expressed as SQL against the database that already holds the data, so a
+pipeline moves to production without leaving it.
+
+** featurizer
+:PROPERTIES:
+:EXPORT_FILE_NAME: featurizer
+:EXPORT_DATE: 2026-08-15
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :lang "Python + SQL" :license "Apache-2.0" :version "1.1.1" :doi "10.5281/zenodo.22287185" :repo "https://github.com/ccd-ia/featurizer" :docs "https://ccd-ia.github.io/featurizer/" :built_for "The feature layer under the triage-pg pipelines above."
+:END:
+
+Deep Feature Synthesis compiled to SQL. Given a relational schema and an
+entity graph, it generates the point-in-time-correct feature matrix as
+queries the database runs itself, so the database computes each feature
+as of a date rather than joining it after the fact.
 
 * Teaching
 :PROPERTIES:
@@ -101,6 +271,10 @@ Course material lands here when the public course repository opens.
 * Cases
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: cases
+:END:
+
+** Cases
+:PROPERTIES:
 :EXPORT_FILE_NAME: _index
 :END:
 
@@ -170,6 +344,122 @@ losses compounded the misallocation.
 </div>
 #+end_export
 
+* CV
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: cv
+:EXPORT_FILE_NAME: _index
+:END:
+
+Doctorate in theoretical physics from UNAM and a postdoctorate in
+complex systems at C3-UNAM. Since 2016 I have led machine learning and
+operations research projects with government agencies and public
+institutions in Mexico, the United States, the United Kingdom, Chile and
+El Salvador, and before that built and ran data science teams in three
+startups and two banks.
+
+The PDF carries the complete record. This page carries the positions,
+the training, and the work worth reading first.
+
+#+begin_export html
+<div class="contact">
+  <div><span class="l">Email</span><a href="mailto:adolfo@unanue.mx">adolfo@unanue.mx</a></div>
+  <div><span class="l">Based in</span><span>Mexico City, Mexico</span></div>
+  <div><span class="l">GitHub</span><a href="https://github.com/nanounanue">nanounanue</a></div>
+  <div><span class="l">LinkedIn</span><a href="https://www.linkedin.com/in/nanounanue">nanounanue</a></div>
+  <div><span class="l">ORCID</span><a href="https://orcid.org/0000-0003-3499-0965">0000-0003-3499-0965</a></div>
+  <div><span class="l">PDF</span><a href="/cv/adolfo-de-unanue-cv.pdf">English</a> <span class="sep">·</span> <a href="/cv/adolfo-de-unanue-cv-es.pdf">Español</a></div>
+</div>
+#+end_export
+
+** Positions
+
+*** Escuela de Gobierno y Transformación Pública, Tecnológico de Monterrey --- 2020 to present
+    :PROPERTIES:
+    :CUSTOM_ID: egap
+    :END:
+
+Director of AI Research; previously Associate Dean. Founded the Centro
+de Ciencia de Datos e IA and the data science center that carries ML
+work from pilot to production, including its governance, explainability
+and monitoring. Projects have covered case management and domestic
+violence risk for the Zacatecas prosecutor's office, pharmaceutical
+logistics, port and terminal operations, school siting in El Salvador,
+and nationwide 5G planning.
+
+*** Independent consulting --- 2025 to present
+
+Fractional CTO work for AI startups, machine learning advisory for
+early-stage ventures, and legal operations automation with language
+models and agentic workflows.
+
+*** DSaPP, University of Chicago, and DSSG at Carnegie Mellon and the Alan Turing Institute --- 2016 to 2022
+
+Lead and senior machine learning researcher, and engineering manager.
+Led or contributed to twenty data science projects across six countries:
+emergency medical services placement, school dropout prevention,
+diabetes screening, HIV care retention, homelessness prevention, housing
+safety, inspection prioritization, police early warning, suicide
+lifeline routing, pollution enforcement, urban mobility and transport
+equity. Co-created Aequitas, a fairness auditing toolkit, and Triage, a
+framework for developing and operating ML models --- both since adopted
+by government and nonprofit programs.
+
+*** ITAM --- 2019 to 2020
+
+Director of the Centro de Ciencia de Datos and of the MSc in Data
+Science, the first such program in Latin America.
+
+*** Open Intelligence, Datank and Sm4rt Predictive --- 2011 to 2017
+
+Co-founder and CTO, chief of machine intelligence, and lead data
+scientist across three ventures. Built production data products adopted
+by agencies and consultancies, and stood up a bank's first fraud data
+warehouse, which cut detection time from weeks to under one week and
+reduced the rule set by roughly ninety percent.
+
+** Education
+
+| Years      | Qualification                                    | Institution                                |
+|------------+--------------------------------------------------+--------------------------------------------|
+| 2010--2012 | Postdoctoral researcher, complex adaptive systems | Centro de Ciencias de la Complejidad, UNAM |
+| 2006--2009 | PhD, theoretical physics                         | Universidad Nacional Autónoma de México    |
+| 2003--2006 | MSc, theoretical physics                         | Universidad Nacional Autónoma de México    |
+| 1998--2001 | MSc, electrical engineering and mechatronics     | CINVESTAV-IPN                              |
+| 1995--1998 | BEng, electronics and control theory             | Universidad Regiomontana                   |
+
+** Selected work
+
+- *Logistics and infrastructure.* Terminal and port optimization
+  (Mexico, ITESM); pharmaceutical logistics (ITESM); emergency medical
+  services placement (Cincinnati, UChicago); school siting (El Salvador,
+  ITESM); nationwide 5G design (El Salvador, ITESM); urban mobility
+  (Seattle, UChicago).
+- *Health and social services.* Proactive diabetes screening (Chicago,
+  UChicago); HIV care retention (Chicago, UChicago); vaccination
+  outreach (Mexico, CMU); social program targeting for SEDESOL
+  (Mexico, UChicago).
+- *Education.* School dropout prediction and social program
+  optimization (El Salvador, UChicago/DSSG); citizen request routing
+  (Mexico, UChicago).
+- *Housing and homelessness.* Rental assistance prioritization
+  (Allegheny County, CMU); rough sleeper service matching (United
+  Kingdom, Alan Turing); roof damage remediation targeting (Baltimore,
+  CMU).
+- *Public safety and justice.* Police early warning systems (Charlotte,
+  San Francisco, Nashville, UChicago); case triage with explainability
+  and domestic violence risk prevention (Zacatecas, ITESM); suicide
+  lifeline routing (CMU).
+- *Environment and labor.* Pollution enforcement (New York State,
+  UChicago); workplace safety inspections (Chile, UChicago); transport
+  equity (West Midlands, Alan Turing); fostering agency inspections
+  (United Kingdom, Alan Turing).
+
+** Also
+
+Invited as an expert on AI regulation by the Mexican Congress and Senate
+in 2025. Endeavor Global Entrepreneur, 2014. Preprints and software are
+listed under [[/research/][research]] and [[/software/][software]].
+
 * Talks
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: talks
@@ -177,3 +467,29 @@ losses compounded the misallocation.
 :END:
 
 Conference talks and their materials.
+
+* Typography test
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: writing
+:EXPORT_FILE_NAME: typography-test
+:EXPORT_DATE: 2026-09-03
+:EXPORT_HUGO_DRAFT: true
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :layout "monograph"
+:END:
+
+** First heading
+
+A paragraph with a numbered note attached to this
+clause[fn::W. Ross Ashby, /An Introduction to Cybernetics/ (1956), ch. 11.]
+and then it continues to the end.
+
+#+begin_marginnote
+An unnumbered note that belongs beside the paragraph.
+#+end_marginnote
+
+A second paragraph, with another note[fn::The claim concerns the class of
+maps a model can express after training, not its parameter count.] here.
+
+** Second heading
+
+Closing paragraph.

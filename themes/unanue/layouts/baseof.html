@@ -1,30 +1,46 @@
 <!doctype html>
-<html lang="{{ or site.LanguageCode "en" }}">
+<html lang="{{ or site.LanguageCode "en" }}" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
 <title>{{ if not .IsHome }}{{ .Title }} · {{ end }}{{ site.Title }}</title>
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Title }} — data science, machine learning, and operations research on national-scale infrastructure.{{ end }}">
 {{ with .OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">{{ end }}
 {{ with resources.Get "css/main.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
 {{ end }}
+{{ partial "theme-init.html" . }}
+{{ with site.Params.goatcounter }}
+{{ $host := (urls.Parse site.BaseURL).Host }}
+<script>
+  // Count the production host only. GoatCounter already ignores localhost and
+  // private networks, so this covers previews served from a public hostname.
+  // To exclude a browser entirely, load {{ $host }}#toggle-goatcounter in it once.
+  if (window.location.host !== {{ $host }}) { window.goatcounter = { no_onload: true }; }
+</script>
+<script data-goatcounter="https://{{ . }}.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+{{ end }}
 </head>
 <body>
 <header class="site">
   <a class="wordmark" href="/">Adolfo De Unánue</a>
-  <nav class="site">
-    {{ range $s := slice "about" "writing" "research" "software" "teaching" "cases" "talks" }}
-    <a href="/{{ $s }}/"{{ if eq $.Section $s }} aria-current="true"{{ end }}>{{ title $s }}</a>
-    {{ end }}
-  </nav>
+  <div class="site-right">
+    <nav class="site">
+      {{ range $s := slice "about" "writing" "research" "software" "teaching" "cases" "talks" }}
+      <a href="/{{ $s }}/"{{ if eq $.Section $s }} aria-current="true"{{ end }}>{{ title $s }}</a>
+      {{ end }}
+    </nav>
+    {{ partial "theme-toggle.html" . }}
+  </div>
 </header>
 <main>{{ block "main" . }}{{ end }}</main>
 <footer class="site">
   <a href="/index.xml">RSS</a>
   <span class="sep">·</span>
-  <a href="#">Subscribe</a>
-  <span class="sep">·</span>
+  {{ with site.Params.subscribe_url }}<a href="{{ . }}">Subscribe</a>
+  <span class="sep">·</span>{{ end }}
   <a href="mailto:adolfo@unanue.mx">adolfo@unanue.mx</a>
 </footer>
 </body>

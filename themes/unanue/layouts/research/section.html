@@ -2,11 +2,23 @@
 <div class="measure section" style="max-width: 760px;">
   <h1>{{ .Title }}</h1>
   <div class="intro">{{ .Content }}</div>
-  {{ if .Pages }}
-  <div style="margin-top: 28px;">
-    {{ range .Pages.ByDate.Reverse }}
-    {{ partial "publication.html" . }}
+  {{ $groups := slice
+      (dict "key" "ml"      "label" "Machine learning and public policy")
+      (dict "key" "physics" "label" "Physics") }}
+  {{ range $g := $groups }}
+    {{ $in := where $.Pages "Params.group" $g.key }}
+    {{ with $in }}
+    <div class="pubgroup">
+      <span class="kicker">{{ $g.label }}</span>
+      {{ range .ByDate.Reverse }}{{ partial "publication.html" . }}{{ end }}
+    </div>
     {{ end }}
+  {{ end }}
+  {{/* anything without a group still shows, so an entry is never silently dropped */}}
+  {{ with where $.Pages "Params.group" nil }}
+  <div class="pubgroup">
+    <span class="kicker">Other</span>
+    {{ range .ByDate.Reverse }}{{ partial "publication.html" . }}{{ end }}
   </div>
   {{ end }}
 </div>

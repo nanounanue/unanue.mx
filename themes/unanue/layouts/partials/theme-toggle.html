@@ -1,0 +1,30 @@
+{{- /* Three-state control: Auto follows the system, Light and Dark pin it.
+       Without JS the button is hidden and the site follows the system alone. */ -}}
+<button type="button" class="theme-toggle" data-theme-toggle>Auto</button>
+<script>
+(function () {
+  var root = document.documentElement;
+  var btn = document.querySelector('[data-theme-toggle]');
+  if (!btn) { return; }
+  var order = ['auto', 'light', 'dark'];
+  function read() {
+    try {
+      var t = localStorage.getItem('theme');
+      return (t === 'light' || t === 'dark') ? t : 'auto';
+    } catch (e) { return 'auto'; }
+  }
+  function apply(mode) {
+    if (mode === 'auto') { root.removeAttribute('data-theme'); }
+    else { root.setAttribute('data-theme', mode); }
+    btn.textContent = mode.charAt(0).toUpperCase() + mode.slice(1);
+    btn.setAttribute('aria-label', 'Colour theme: ' + mode + '. Activate to change.');
+    btn.title = 'Colour theme: ' + mode;
+  }
+  apply(read());
+  btn.addEventListener('click', function () {
+    var next = order[(order.indexOf(read()) + 1) % order.length];
+    try { localStorage.setItem('theme', next); } catch (e) { /* not persisted */ }
+    apply(next);
+  });
+})();
+</script>

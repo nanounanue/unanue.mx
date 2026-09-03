@@ -1,0 +1,13 @@
+{{- /* Runs before first paint: applies the reader's pinned theme so the page
+       never flashes the wrong palette, and drops the no-js class that hides
+       the control. Kept inline and blocking on purpose. */ -}}
+<script>
+(function () {
+  var r = document.documentElement;
+  r.classList.remove('no-js');
+  try {
+    var t = localStorage.getItem('theme');
+    if (t === 'dark' || t === 'light') { r.setAttribute('data-theme', t); }
+  } catch (e) { /* private mode or blocked storage: fall back to the system theme */ }
+})();
+</script>

@@ -8,7 +8,7 @@
     {{ with .Section }}<span class="kicker">{{ title . }}</span>{{ end }}
     <h1>{{ .Title }}</h1>
     {{ if not .Date.IsZero }}<div class="meta-line">{{ .Date.Format "January 2006" }}</div>{{ end }}
-    <div class="content" style="margin-top: 28px;">{{ .Content }}</div>
+    <div class="content" style="margin-top: 28px;">{{ partial "sidenotes.html" .Content }}</div>
   </article>
 </div>
 {{ end }}

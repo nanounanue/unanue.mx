@@ -1,7 +1,12 @@
 /* unanue.mx — navy-gold, book-like. Values ported from the approved
    design canvas artboards (design/*.dc.html). */
 
+/* Palette. Light is the base; dark is applied when the system asks for it
+   (unless the reader pinned light) and when the reader pinned dark. The two
+   dark blocks are deliberate duplicates — CSS cannot share declarations
+   across a media query and an attribute selector. */
 :root {
+  color-scheme: light;
   --paper: #FBF9F3;
   --ink: #0B1F3B;
   --body: #26303C;
@@ -11,13 +16,15 @@
   --gold-bright: #C9A83C;
   --hair: #EAE3D2;
   --hair-soft: #EDE6D4;
+  --hair-note: #E2DAC6;
   --hl: #FFF3B0;
   --serif: "Iowan Old Style", Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
   --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 }
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
     --paper: #14171E;
     --ink: #E8E4DA;
     --body: #C9CDD6;
@@ -27,8 +34,23 @@
     --gold-bright: #D9AB4A;
     --hair: #262B37;
     --hair-soft: #262B37;
+    --hair-note: #2F3542;
     --hl: #3A3320;
   }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #14171E;
+  --ink: #E8E4DA;
+  --body: #C9CDD6;
+  --muted: #9AA0AE;
+  --faint: #767D8F;
+  --gold: #D9AB4A;
+  --gold-bright: #D9AB4A;
+  --hair: #262B37;
+  --hair-soft: #262B37;
+  --hair-note: #2F3542;
+  --hl: #3A3320;
 }
 
 * { box-sizing: border-box; }
@@ -70,6 +92,17 @@ nav.site { display: flex; gap: 26px; font-family: var(--sans); font-size: 11.5px
 nav.site a { color: var(--faint); text-decoration: none; }
 nav.site a:hover { color: var(--gold); }
 nav.site a[aria-current="true"] { color: var(--gold); border-bottom: 1px solid var(--gold-bright); padding-bottom: 2px; }
+
+.site-right { display: flex; align-items: baseline; gap: 26px; flex-wrap: wrap; }
+.theme-toggle {
+  appearance: none; background: none; border: none; padding: 0; cursor: pointer;
+  font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--faint); line-height: inherit;
+}
+.theme-toggle:hover { color: var(--gold); }
+.theme-toggle:focus-visible { outline: 1px solid var(--gold-bright); outline-offset: 3px; }
+/* The control does nothing without JS, so it is not shown without JS. */
+.no-js .theme-toggle { display: none; }
 
 footer.site {
   border-top: 1px solid var(--hair); padding: 22px 56px; margin-top: 4rem;
@@ -119,6 +152,23 @@ main { display: block; }
 .pub .meta a { color: var(--gold); text-decoration: none; }
 .pub .meta a:hover { text-decoration: underline; }
 .pub .meta .sep { color: var(--hair); }
+.pub .deck { font-size: 15px; color: var(--muted); line-height: 1.5; max-width: 62ch; }
+.pubgroup { margin-top: 44px; }
+.pubgroup .kicker { display: block; padding-bottom: 10px; border-bottom: 1px solid var(--hair); }
+
+/* ── software: package entries ───────────────────────────────── */
+.pkg { display: flex; flex-direction: column; gap: 8px; padding: 22px 0; border-bottom: 1px solid var(--hair-soft); }
+.pkg:last-child { border-bottom: none; }
+.pkg .title { font-size: 20px; color: var(--ink); text-decoration: none; font-family: var(--mono); letter-spacing: -0.01em; }
+.pkg .title:hover { color: var(--gold); }
+.pkg .deck { max-width: 62ch; }
+.pkg .deck p { font-size: 16px; color: var(--body); line-height: 1.62; margin: 0; }
+.pkg .meta { display: flex; gap: 10px; align-items: baseline; font-family: var(--mono); font-size: 12.5px; color: var(--faint); flex-wrap: wrap; }
+.pkg .meta a { color: var(--gold); text-decoration: none; }
+.pkg .meta a:hover { text-decoration: underline; }
+.pkg .meta .sep { color: var(--hair); }
+.pkg-for { font-size: 14.5px; color: var(--muted); line-height: 1.55; border-left: 2px solid var(--hair-note); padding-left: 14px; }
+.pkg-for .kicker { display: block; margin-bottom: 2px; color: var(--faint); }
 
 /* ── case studies ────────────────────────────────────────────── */
 .stat-band { display: flex; border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair); margin: 44px 0 0; flex-wrap: wrap; }
@@ -128,10 +178,28 @@ main { display: block; }
 .stat .l { font-family: var(--sans); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--faint); }
 .case-grid { margin: 48px 0 0; display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 36px 44px; }
 .case-grid .label { padding-top: 5px; }
+
+/* ── cv ──────────────────────────────────────────────────────── */
+.contact { margin: 34px 0 0; border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair); padding: 18px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 8px 32px; font-family: var(--mono); font-size: 13px; }
+.contact .l { display: inline-block; min-width: 84px; color: var(--faint); font-family: var(--sans); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; }
+.contact a { color: var(--gold); text-decoration: none; }
+.contact a:hover { text-decoration: underline; }
+.contact .sep { color: var(--hair); }
+.cv .content h2 { font-size: 24px; margin: 52px 0 0; padding-top: 14px; border-top: 1px solid var(--hair); }
+.cv .content h2:first-of-type { border-top: none; padding-top: 0; margin-top: 44px; }
+.cv .content h3 { font-size: 17px; margin: 30px 0 0; color: var(--ink); }
+.cv .content p { font-size: 16.5px; line-height: 1.7; margin: 10px 0 0; max-width: 66ch; }
+.cv .content ul { padding-left: 0; list-style: none; margin: 16px 0 0; }
+.cv .content ul li { font-size: 16.5px; line-height: 1.65; margin: 0 0 14px; padding-left: 16px; border-left: 2px solid var(--hair-note); max-width: 66ch; }
+.cv .content ul li strong { color: var(--ink); }
+.cv .content table td:first-child { font-family: var(--mono); font-size: 12.5px; color: var(--faint); white-space: nowrap; }
 .case-grid p { margin: 0; font-size: 17.5px; line-height: 1.72; }
 
 /* ── monograph (long-form essays) ────────────────────────────── */
-.monograph { display: grid; grid-template-columns: 220px minmax(0, 660px); gap: 56px; justify-content: center; padding: 64px 40px 0; }
+/* Three tracks: contents rail, text column, margin for the notes. The third
+   track only reserves space — sidenotes reach it by floating out of the text
+   column with a negative right margin. */
+.monograph { display: grid; grid-template-columns: 220px minmax(0, 660px) 220px; gap: 56px; justify-content: center; padding: 64px 40px 0; }
 .monograph .toc { position: sticky; top: 40px; align-self: start; font-size: 14.5px; }
 .monograph .toc .kicker { display: block; margin-bottom: 10px; color: var(--faint); }
 .monograph .toc nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
@@ -144,6 +212,46 @@ main { display: block; }
 .monograph .content sup a { color: var(--gold); text-decoration: none; font-size: 12px; }
 .monograph .footnotes { margin-top: 3rem; border-top: 1px solid var(--hair); font-size: 14px; color: var(--muted); }
 .monograph .footnotes hr { display: none; }
+
+/* ── margin notes ─────────────────────────────────────────────
+   .sidenote   — numbered, spliced from an Org footnote by partials/sidenotes.html
+   .marginnote — unnumbered, written as #+begin_marginnote in site.org */
+.sn-num {
+  color: var(--gold); font-size: 12px; font-family: var(--serif);
+  vertical-align: super; line-height: 0; cursor: pointer;
+}
+.sn-num:hover { color: var(--gold-bright); }
+.sn-toggle { display: none; }
+.sidenote, .marginnote {
+  float: right;
+  clear: right;
+  width: 220px;
+  margin-right: -276px;   /* 220px track + 56px gap */
+  margin-top: 6px;
+  margin-bottom: 26px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--muted);
+  border-top: 1px solid var(--hair-note);
+  padding-top: 10px;
+}
+.marginnote { display: block; }
+.monograph .content .marginnote p { margin: 0; font-size: 13.5px; line-height: 1.6; }
+.sidenote .sn-n { color: var(--gold); }
+
+/* Under 1240px there is no margin to write in: numbered notes fold back into
+   the text column, revealed by their own number; unnumbered ones become
+   inset asides. */
+@media (max-width: 1239px) {
+  .monograph { grid-template-columns: 220px minmax(0, 660px); }
+  .sidenote, .marginnote { float: none; clear: none; width: auto; margin-right: 0; }
+  .sidenote { display: none; }
+  .sn-toggle:checked + .sidenote { display: block; margin: 14px 0 18px; }
+  .marginnote {
+    margin: 24px 0; padding: 0 0 0 14px;
+    border-top: none; border-left: 2px solid var(--hair-note);
+  }
+}
 
 /* ── responsive ──────────────────────────────────────────────── */
 @media (max-width: 900px) {

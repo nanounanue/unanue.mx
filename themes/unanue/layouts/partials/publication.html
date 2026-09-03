@@ -1,5 +1,6 @@
 <div class="pub">
   <a class="title" href="{{ with .Params.url_override }}{{ . }}{{ else }}{{ .RelPermalink }}{{ end }}">{{ .Title }}</a>
+  {{ with .Params.deck }}<div class="deck">{{ . }}</div>{{ end }}
   <div class="meta">
     {{ with .Params.venue }}<span>{{ . }}</span><span class="sep">·</span>{{ end }}
     {{ with .Params.status }}<span>{{ . }}</span>{{ end }}

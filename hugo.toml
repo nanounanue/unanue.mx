@@ -4,6 +4,14 @@ title = "Adolfo De Unánue"
 theme = "unanue"
 enableRobotsTXT = true
 
+[params]
+  # GoatCounter account name only — the part before .goatcounter.com.
+  # Empty means no analytics script is emitted at all.
+  goatcounter = "nanounanue"
+  # Full URL of the Substack subscribe page. Empty hides the footer link
+  # rather than pointing it at a dead "#".
+  subscribe_url = "https://nanounanue.substack.com/subscribe"
+
 [markup]
   [markup.goldmark.renderer]
     # ox-hugo emits raw HTML for org constructs; goldmark must keep it

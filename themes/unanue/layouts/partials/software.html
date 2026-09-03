@@ -1,0 +1,17 @@
+{{- /* One released package. Mirrors publication.html: the name links to the
+       repository, and the meta line carries only fields that exist — the DOI
+       and paper slots stay empty until Zenodo and JOSS fill them. */ -}}
+<div class="pkg">
+  <a class="title" href="{{ with .Params.repo }}{{ . }}{{ else }}{{ .RelPermalink }}{{ end }}">{{ .Title }}</a>
+  <div class="deck">{{ .Content }}</div>
+  <div class="meta">
+    {{ with .Params.lang }}<span>{{ . }}</span>{{ end }}
+    {{ with .Params.license }}<span class="sep">·</span><span>{{ . }}</span>{{ end }}
+    {{ with .Params.version }}<span class="sep">·</span><span>v{{ . }}</span>{{ end }}
+    {{ with .Params.repo }}<span class="sep">·</span><a href="{{ . }}">repo</a>{{ end }}
+    {{ with .Params.docs }}<span class="sep">·</span><a href="{{ . }}">docs</a>{{ end }}
+    {{ with .Params.doi }}<span class="sep">·</span><a href="https://doi.org/{{ . }}">doi:{{ . }}</a>{{ end }}
+    {{ with .Params.paper }}<span class="sep">·</span><a href="{{ . }}">paper</a>{{ end }}
+  </div>
+  {{ with .Params.built_for }}<div class="pkg-for"><span class="kicker">Built for</span> {{ . }}</div>{{ end }}
+</div>
