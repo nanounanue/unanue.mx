@@ -8,7 +8,7 @@
   {{ range $g := $groups }}
     {{ $in := where $.Pages "Params.group" $g.key }}
     {{ with $in }}
-    <div class="pubgroup">
+    <div class="pubgroup" id="{{ $g.key }}">
       <span class="kicker">{{ $g.label }}</span>
       {{ range .ByDate.Reverse }}{{ partial "publication.html" . }}{{ end }}
     </div>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <rect width="1280" height="640" fill="#FBF9F3"/>
+  <text x="96" y="120" font-family="Menlo" font-size="23.1" letter-spacing="1.9"
+        fill="#8A6D1F">CCD-IA / TRIAGE-PG</text>
+  <text x="96" y="289" font-family="Palatino" font-size="96" fill="#0B1F3B">triage-pg</text>
+  <rect x="96" y="350" width="131" height="7" fill="#C9A83C"/>
+  <text x="96" y="432" font-family="Palatino" font-size="43" fill="#6A6355">Temporal machine learning for public</text>
+  <text x="96" y="492" font-family="Palatino" font-size="43" fill="#6A6355">policy, end to end inside PostgreSQL</text>
+  <rect x="96" y="522" width="1089" height="2" fill="#EAE3D2"/>
+  <text x="96" y="571" font-family="Menlo" font-size="23.3" fill="#6A6355">MIT &#183; Python + PostgreSQL &#183; ccd-ia.github.io/triage-pg</text>
+</svg>

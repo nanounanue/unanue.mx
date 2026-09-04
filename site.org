@@ -60,9 +60,10 @@ Essays and posts. The first pieces arrive with the site.
 :EXPORT_FILE_NAME: _index
 :END:
 
-Two bodies of work: machine learning for public policy since 2017, and
-theoretical physics before that. Entries link the canonical artifact —
-DOI where one exists, arXiv otherwise.
+Two bodies of work: @@html:<a href="#ml">machine learning for public
+policy</a>@@ since 2017, and @@html:<a href="#physics">theoretical
+physics</a>@@ before that. Entries link the canonical artifact — DOI
+where one exists, arXiv otherwise.
 
 ** Designing AI for Prosecutorial Governance: Case Prioritization and Statutory Oversight in Mexico
 :PROPERTIES:
@@ -239,14 +240,14 @@ them.
 :PROPERTIES:
 :EXPORT_FILE_NAME: triage-pg
 :EXPORT_DATE: 2026-08-26
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :lang "Python + SQL" :license "MIT" :version "1.1.4" :repo "https://github.com/ccd-ia/triage-pg" :docs "https://ccd-ia.github.io/triage-pg/" :built_for "Case triage at a state prosecutor’s office; early-warning pilots in health and education."
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :lang "Python + SQL" :license "MIT" :version "1.1.5" :doi "10.5281/zenodo.22292553" :repo "https://github.com/ccd-ia/triage-pg" :docs "https://ccd-ia.github.io/triage-pg/" :built_for "Case triage at a state prosecutor’s office; early-warning pilots in health and education."
 :END:
 
-Early-warning machine learning pipelines that run inside PostgreSQL. A
-fork of the University of Chicago's Triage in which cohorts, labels,
-features, temporal cross-validation and model governance are all
-expressed as SQL against the database that already holds the data, so a
-pipeline moves to production without leaving it.
+Temporal machine learning for public policy, end to end inside
+PostgreSQL. A fork of the University of Chicago's Triage in which
+cohorts, labels, features, temporal cross-validation and model
+governance are all expressed as SQL against the database that already
+holds the data, so a pipeline moves to production without leaving it.
 
 ** featurizer
 :PROPERTIES:
