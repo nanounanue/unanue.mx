@@ -7,15 +7,16 @@
 <a href=/talks/>Talks</a></nav><button type=button class=theme-toggle data-theme-toggle>Auto</button>
 <script>(function(){var t,n=document.documentElement,e=document.querySelector("[data-theme-toggle]");if(!e)return;t=["auto","light","dark"];function s(){try{var e=localStorage.getItem("theme");return e==="light"||e==="dark"?e:"auto"}catch{return"auto"}}function o(t){t==="auto"?n.removeAttribute("data-theme"):n.setAttribute("data-theme",t),e.textContent=t.charAt(0).toUpperCase()+t.slice(1),e.setAttribute("aria-label","Colour theme: "+t+". Activate to change."),e.title="Colour theme: "+t}o(s()),e.addEventListener("click",function(){var e=t[(t.indexOf(s())+1)%t.length];try{localStorage.setItem("theme",e)}catch{}o(e)})})()</script></div></header><main><div class="measure section" style=max-width:760px><h1>Software</h1><div class=intro><p>Released packages, with the license, version and documentation each one
 ships. DOIs and software papers appear here as Zenodo and JOSS issue
-them.</p></div><div style=margin-top:28px><div class=pkg><a class=title href=https://github.com/ccd-ia/triage-pg>triage-pg</a><div class=deck><p>Early-warning machine learning pipelines that run inside PostgreSQL. A
-fork of the University of Chicago&rsquo;s Triage in which cohorts, labels,
-features, temporal cross-validation and model governance are all
-expressed as SQL against the database that already holds the data, so a
-pipeline moves to production without leaving it.</p></div><div class=meta><span>Python + SQL</span>
+them.</p></div><div style=margin-top:28px><div class=pkg><a class=title href=https://github.com/ccd-ia/triage-pg>triage-pg</a><div class=deck><p>Temporal machine learning for public policy, end to end inside
+PostgreSQL. A fork of the University of Chicago&rsquo;s Triage in which
+cohorts, labels, features, temporal cross-validation and model
+governance are all expressed as SQL against the database that already
+holds the data, so a pipeline moves to production without leaving it.</p></div><div class=meta><span>Python + SQL</span>
 <span class=sep>·</span><span>MIT</span>
-<span class=sep>·</span><span>v1.1.4</span>
+<span class=sep>·</span><span>v1.1.5</span>
 <span class=sep>·</span><a href=https://github.com/ccd-ia/triage-pg>repo</a>
-<span class=sep>·</span><a href=https://ccd-ia.github.io/triage-pg/>docs</a></div><div class=pkg-for><span class=kicker>Built for</span> Case triage at a state prosecutor’s office; early-warning pilots in health and education.</div></div><div class=pkg><a class=title href=https://github.com/ccd-ia/featurizer>featurizer</a><div class=deck><p>Deep Feature Synthesis compiled to SQL. Given a relational schema and an
+<span class=sep>·</span><a href=https://ccd-ia.github.io/triage-pg/>docs</a>
+<span class=sep>·</span><a href=https://doi.org/10.5281/zenodo.22292553>doi:10.5281/zenodo.22292553</a></div><div class=pkg-for><span class=kicker>Built for</span> Case triage at a state prosecutor’s office; early-warning pilots in health and education.</div></div><div class=pkg><a class=title href=https://github.com/ccd-ia/featurizer>featurizer</a><div class=deck><p>Deep Feature Synthesis compiled to SQL. Given a relational schema and an
 entity graph, it generates the point-in-time-correct feature matrix as
 queries the database runs itself, so the database computes each feature
 as of a date rather than joining it after the fact.</p></div><div class=meta><span>Python + SQL</span>
