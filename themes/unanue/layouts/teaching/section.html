@@ -1,0 +1,10 @@
+{{ define "main" }}
+<div class="measure section" style="max-width: 760px;">
+  <h1>{{ .Title }}</h1>
+  <div class="intro">{{ .Content }}</div>
+  {{/* one flat list: six courses need no tiering, and every one is a full course */}}
+  <div class="pubgroup">
+    {{ range .Pages.ByDate.Reverse }}{{ partial "course.html" . }}{{ end }}
+  </div>
+</div>
+{{ end }}

@@ -1,0 +1,23 @@
+{{- /* One course. Same visual object as talk.html — see the shared .talk,
+       .course rules in main.css — but the meta line answers the questions a
+       reader asks of teaching: where, at what level, when, and whether the
+       material can be seen. The materials slot stays empty until something is
+       actually public.
+
+       The parts are collected and then joined, so a missing field never leaves
+       a dangling separator and a course with no metadata at all emits no meta
+       line rather than an empty one. */ -}}
+<div class="course">
+  <div class="title">{{ .Title }}</div>
+  {{ with .Content }}<div class="deck">{{ . }}</div>{{ end }}
+  {{- $bits := slice }}
+  {{- if .Params.forthcoming }}{{ $bits = $bits | append `<span class="soon">Forthcoming</span>` }}{{ end }}
+  {{- with .Params.institution }}{{ $bits = $bits | append (printf "<span>%s</span>" (. | htmlEscape)) }}{{ end }}
+  {{- with .Params.level }}{{ $bits = $bits | append (printf "<span>%s</span>" (. | htmlEscape)) }}{{ end }}
+  {{- with .Params.term }}{{ $bits = $bits | append (printf "<span>%s</span>" (. | htmlEscape)) }}{{ end }}
+  {{- with .Params.editions }}{{ $bits = $bits | append (printf "<span>%s</span>" (. | htmlEscape)) }}{{ end }}
+  {{- with .Params.materials }}{{ $bits = $bits | append (printf `<a href="%s">materials</a>` (. | htmlEscape)) }}{{ end }}
+  {{- with $bits }}
+  <div class="meta">{{ delimit . `<span class="sep">·</span>` | safeHTML }}</div>
+  {{- end }}
+</div>

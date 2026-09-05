@@ -1,0 +1,21 @@
+{{- /* One talk given its own paragraph. Mirrors publication.html, minus the
+       title link: a talk has no canonical artifact to point at, so the name is
+       plain text and the meta line carries only fields that exist — the slides
+       and video slots stay empty until there is something to link.
+
+       The parts are collected and then joined, so a missing field never leaves
+       a dangling separator. */ -}}
+<div class="talk">
+  <div class="title">{{ .Title }}</div>
+  {{ with .Content }}<div class="deck">{{ . }}</div>{{ end }}
+  {{- $bits := slice }}
+  {{- if .Params.forthcoming }}{{ $bits = $bits | append `<span class="soon">Forthcoming</span>` }}{{ end }}
+  {{- with .Params.venue }}{{ $bits = $bits | append (printf "<span>%s</span>" (. | htmlEscape)) }}{{ end }}
+  {{- with .Params.when }}{{ $bits = $bits | append (printf "<span>%s</span>" (. | htmlEscape)) }}{{ end }}
+  {{- with .Params.slides }}{{ $bits = $bits | append (printf `<a href="%s">slides</a>` (. | htmlEscape)) }}{{ end }}
+  {{- with .Params.video }}{{ $bits = $bits | append (printf `<a href="%s">video</a>` (. | htmlEscape)) }}{{ end }}
+  {{- with .Params.code }}{{ $bits = $bits | append (printf `<a href="%s">code</a>` (. | htmlEscape)) }}{{ end }}
+  {{- with $bits }}
+  <div class="meta">{{ delimit . `<span class="sep">·</span>` | safeHTML }}</div>
+  {{- end }}
+</div>

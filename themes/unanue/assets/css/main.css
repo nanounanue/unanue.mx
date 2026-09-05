@@ -170,6 +170,30 @@ main { display: block; }
 .pkg-for { font-size: 14.5px; color: var(--muted); line-height: 1.55; border-left: 2px solid var(--hair-note); padding-left: 14px; }
 .pkg-for .kicker { display: block; margin-bottom: 2px; color: var(--faint); }
 
+/* ── talks and courses: a paragraph each; talks add a one-line tier ── */
+.talk, .course { display: flex; flex-direction: column; gap: 6px; padding: 18px 0; border-bottom: 1px solid var(--hair-soft); }
+.talk:last-child, .course:last-child { border-bottom: none; }
+.talk .title, .course .title { font-size: 19px; color: var(--ink); line-height: 1.4; }
+.talk .deck, .course .deck { max-width: 62ch; }
+.talk .deck p, .course .deck p { font-size: 15px; color: var(--muted); line-height: 1.55; margin: 0; }
+.talk .meta, .course .meta { display: flex; gap: 10px; align-items: baseline; font-family: var(--mono); font-size: 12.5px; color: var(--faint); flex-wrap: wrap; }
+.talk .meta a, .course .meta a { color: var(--gold); text-decoration: none; }
+.talk .meta a:hover, .course .meta a:hover { text-decoration: underline; }
+.talk .meta .sep, .course .meta .sep { color: var(--hair); }
+.talk .meta .soon, .course .meta .soon { color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; font-size: 11px; }
+
+.talk-brief { display: grid; grid-template-columns: 4.5em minmax(0, 1fr) minmax(0, 15em); gap: 0 18px; align-items: baseline; padding: 9px 0; border-bottom: 1px solid var(--hair-soft); }
+.talk-brief:last-child { border-bottom: none; }
+.talk-brief .year { font-family: var(--mono); font-size: 12.5px; color: var(--faint); }
+.talk-brief .title { font-size: 15.5px; color: var(--body); }
+/* venue gets its own track so a long one wraps inside itself instead of
+   folding back under the title, where it reads as a second title line */
+.talk-brief .venue { font-family: var(--mono); font-size: 12.5px; color: var(--faint); text-align: right; line-height: 1.5; }
+@media (max-width: 620px) {
+  .talk-brief { grid-template-columns: 1fr; gap: 2px; }
+  .talk-brief .venue { text-align: left; }
+}
+
 /* ── case studies ────────────────────────────────────────────── */
 .stat-band { display: flex; border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair); margin: 44px 0 0; flex-wrap: wrap; }
 .stat { flex: 1 1 140px; padding: 24px 20px; display: flex; flex-direction: column; gap: 6px; border-left: 1px solid var(--hair); }

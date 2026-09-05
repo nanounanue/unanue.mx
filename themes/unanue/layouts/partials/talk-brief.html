@@ -1,0 +1,8 @@
+{{- /* An earlier talk, one line: year, title, venue. These are listed so the
+       record is complete, not to be read one at a time, so they carry no deck
+       and no links. The three cells are the three grid tracks. */ -}}
+<div class="talk-brief">
+  <span class="year">{{ with .Params.when }}{{ . }}{{ else }}{{ .Date.Format "2006" }}{{ end }}</span>
+  <span class="title">{{ .Title }}</span>
+  <span class="venue">{{ with .Params.venue }}{{ . }}{{ end }}</span>
+</div>

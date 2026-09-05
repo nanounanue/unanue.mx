@@ -264,10 +264,76 @@ as of a date rather than joining it after the fact.
 * Teaching
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: teaching
+:END:
+
+** Teaching
+:PROPERTIES:
 :EXPORT_FILE_NAME: _index
 :END:
 
-Course material lands here when the public course repository opens.
+Graduate and executive courses in operations research, data science and
+public policy. Material appears against a course as it is cleared for
+release.
+
+** Ciencia de Datos para Políticas Públicas
+:PROPERTIES:
+:EXPORT_FILE_NAME: cdpp
+:EXPORT_DATE: 2026-07-12
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :institution "EGobiernoyTP, Tec de Monterrey" :level "Graduate, TC5039" :term "April–July 2026" :editions "Four editions since 2022"
+:END:
+
+Turning analysis into action, and deliberately not a course on
+machine-learning methods. Built on Rayid Ghani and Kit Rodolfa's /Machine
+Learning in Practice/ at Carnegie Mellon, which itself comes out of the
+Data Science for Social Good fellowship.
+
+** State-Guided Optimization: The Chinese Approach
+:PROPERTIES:
+:EXPORT_FILE_NAME: eo5025
+:EXPORT_DATE: 2026-06-30
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :institution "Tec de Monterrey" :level "Graduate, EO5025" :term "April–June 2026"
+:END:
+
+Operations research for national infrastructure networks, taught through
+the way one state directs them. Twelve weeks organised around the claim
+that an objective function is a political statement about who is served
+first — the same argument the rest of this site makes, worked out at the
+length a course allows.
+
+** Systems concepts for public policy
+:PROPERTIES:
+:EXPORT_FILE_NAME: systems-public-policy
+:EXPORT_DATE: 2025-03-15
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :institution "EGobiernoyTP, Tec de Monterrey" :level "Graduate, TC4050" :term "2025"
+:END:
+
+Systems thinking, complex adaptive systems and systems engineering put to
+societal problems — past the linear and reductionist habit, toward
+interdisciplinary and systemic policy.
+
+** Ciencia para futuros tomadores de decisión
+:PROPERTIES:
+:EXPORT_FILE_NAME: ciencia-para-decidir
+:EXPORT_DATE: 2026-09-14
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :institution "EGobiernoyTP, Tec de Monterrey" :level "Graduate" :term "From 14 September 2026" :editions "Two previous editions" :forthcoming "t" :publishdate "2026-09-04"
+:END:
+
+Energy, warming, health, logistics, quantum computing: the political and
+economic questions increasingly turn on technical content, and a leader
+who misreads the science will decide badly. The concepts and techniques
+that help someone decide, for people who already make decisions and
+people who are about to.
+
+** Inspecciones
+:PROPERTIES:
+:EXPORT_FILE_NAME: inspecciones
+:EXPORT_DATE: 2022-10-13
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :term "October 2022" :editions "Three editions, 2021–2022"
+:END:
+
+The state must verify that people and firms comply with far more rules
+than it can ever inspect, so the real question is which inspections to
+run. A course on prioritising scarce enforcement capacity.
 
 * Cases
 :PROPERTIES:
@@ -464,10 +530,216 @@ listed under [[/research/][research]] and [[/software/][software]].
 * Talks
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: talks
+:END:
+
+** Talks
+:PROPERTIES:
 :EXPORT_FILE_NAME: _index
 :END:
 
-Conference talks and their materials.
+Workshops, conference talks and briefings, most recent first. The selected
+ones carry a description; the rest are listed so the record is complete.
+
+** ¿Quién escribe la función objetivo?
+:PROPERTIES:
+:EXPORT_FILE_NAME: quien-escribe-la-funcion-objetivo
+:EXPORT_DATE: 2026-09-09
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :tier "featured" :venue "A3 México Business Forum, Querétaro" :when "9 September 2026" :forthcoming "t" :publishdate "2026-09-04"
+:END:
+
+Who decides what an artificial intelligence should optimise? Advanced
+manufacturing is the case: the question is not what the technology can
+do but how the objective function gets written, and by whom — which is
+the decision that gets automated along with everything else.
+
+** Cuando el Software se Disuelve
+:PROPERTIES:
+:EXPORT_FILE_NAME: cuando-el-software-se-disuelve
+:EXPORT_DATE: 2026-03-27
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :tier "featured" :venue "EGobiernoyTP, Tec de Monterrey" :when "March 2026"
+:END:
+
+A live demo takes one prompt from raw data to a finished dashboard, and
+the talk asks what it means that the product dissolved into the prompt.
+It closes on a sustained critique of Acemoglu's /Simple Macroeconomics
+of AI/: the modest 1.2% follows from the shape of the model — Hulten's
+theorem and an exogenous task taxonomy — and restoring the feedback loop
+he excludes overturns the conclusion. Choosing the formal framework is
+itself a political choice about what the model is permitted to find.
+
+** Advanced Claude Code Workflows
+:PROPERTIES:
+:EXPORT_FILE_NAME: advanced-claude-code-workflows
+:EXPORT_DATE: 2026-03-17
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :tier "featured" :venue "Centro de Ciencia de Datos" :when "March 2026"
+:END:
+
+Seven primitives — =CLAUDE.md=, hooks, skills, subagents, teams,
+commands and session management — argued as the unit of reuse in a
+data-science practice, in place of prompts. Context rot is the
+constraint the whole design answers to, and the talk ends on a minimal
+setup and a maturity ladder to start from on Monday.
+
+** Simulating Reality: From AlphaGo to AlphaEvolve
+:PROPERTIES:
+:EXPORT_FILE_NAME: simulating-reality
+:EXPORT_DATE: 2025-10-21
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :tier "featured" :venue "Data Day" :when "October 2025"
+:END:
+
+The thesis comes first: encode the norm — objectives and limits — as an
+executable harness, and evolutionary search over code can explore the
+policies and heuristics that maximise welfare under verifiable
+constraints. Built from /Move 37/ through AlphaFold to AlphaEvolve and
+tested against Hassabis's conjecture that any pattern in nature can be
+modelled efficiently by classical algorithms, it closes on what that
+makes programmable, auditable and measurable in public policy, with the
+Corredor Interoceánico as the worked case.
+
+** Los LLM como preservadores de variedad
+:PROPERTIES:
+:EXPORT_FILE_NAME: llms-preservadores-de-variedad
+:EXPORT_DATE: 2024-11-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :tier "featured" :venue "Data Day" :when "2024"
+:END:
+
+Read through Lyapunov stability, Prigogine's dissipative structures and
+Beer's Viable System Model: a trained model reduces variety in Ashby's sense
+while a language model preserves it, and that difference decides where each
+one belongs.
+** Taller de Inteligencia Artificial
+:PROPERTIES:
+:EXPORT_FILE_NAME: taller-ia-egobiernoytp
+:EXPORT_DATE: 2024-07-09
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :tier "featured" :venue "EGobiernoyTP, Tec de Monterrey" :when "July 2024"
+:END:
+
+A survey for faculty across the whole stack — supervised learning,
+reinforcement learning, deep learning and generative models — organised
+around what each one makes possible rather than how it works, and worked
+through a live unemployment-prediction example with applications in
+health, environment and education.
+
+** IA y Toma de Decisiones
+:PROPERTIES:
+:EXPORT_FILE_NAME: ia-y-toma-de-decisiones
+:EXPORT_DATE: 2024-06-15
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :tier "featured" :venue "Master Class" :when "June 2024"
+:END:
+
+Machine learning, reinforcement learning and generative models set
+against the decisions they can actually change, with centaurs —
+human-and-model pairings — as the working unit. The hard part is not the
+model but naming the decision and the action it enables.
+
+** Some examples to get the conversation going
+:PROPERTIES:
+:EXPORT_FILE_NAME: sri-lanka-2024
+:EXPORT_DATE: 2024-12-03
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "University of Moratuwa, Sri Lanka" :when "2024"
+:END:
+** Los nuevos retos del CIO ante la IA
+:PROPERTIES:
+:EXPORT_FILE_NAME: pink-elephant-2024
+:EXPORT_DATE: 2024-09-11
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Pink Elephant" :when "2024"
+:END:
+** Descifrando la próxima década de las telecomunicaciones y la economía digital
+:PROPERTIES:
+:EXPORT_FILE_NAME: futuro-digital-2023
+:EXPORT_DATE: 2023-08-14
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Educación continua, Tec de Monterrey" :when "2023"
+:END:
+** Proyectos de Ciencia de datos en política pública
+:PROPERTIES:
+:EXPORT_FILE_NAME: dd-2022
+:EXPORT_DATE: 2022-03-29
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Data Day" :when "2022"
+:END:
+** Ciencia de datos en políticas públicas: retos y perspectivas
+:PROPERTIES:
+:EXPORT_FILE_NAME: datapub-2022
+:EXPORT_DATE: 2022-01-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "DataPub" :when "2022"
+:END:
+** Ya tengo un modelo, ¿ahora qué hago?
+:PROPERTIES:
+:EXPORT_FILE_NAME: dd-2021
+:EXPORT_DATE: 2021-11-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Data Day" :when "2021"
+:END:
+** Machine Learning and its applications to the labor market
+:PROPERTIES:
+:EXPORT_FILE_NAME: iadb-2021
+:EXPORT_DATE: 2021-06-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Inter-American Development Bank" :when "2021"
+:END:
+** Ciencia de Datos: ¿dónde enfocarse?
+:PROPERTIES:
+:EXPORT_FILE_NAME: hpe-2021
+:EXPORT_DATE: 2021-04-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "HPE" :when "2021"
+:END:
+** ¿Los algoritmos discriminan?
+:PROPERTIES:
+:EXPORT_FILE_NAME: ai-biz-chile-2021
+:EXPORT_DATE: 2021-03-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "AI Biz Sessions, Chile" :when "2021"
+:END:
+** Actuando bajo Incertidumbre: Ciencias de la Decisión
+:PROPERTIES:
+:EXPORT_FILE_NAME: actuando-bajo-incertidumbre
+:EXPORT_DATE: 2020-12-02
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "BBVA Data Week · Tec de Monterrey" :when "2020"
+:END:
+** Una nueva ciencia de datos para México
+:PROPERTIES:
+:EXPORT_FILE_NAME: dd-2020
+:EXPORT_DATE: 2020-11-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Data Day" :when "2020"
+:END:
+** Analizando disparidades en modelos de ML: Aequitas
+:PROPERTIES:
+:EXPORT_FILE_NAME: aequitas-chile-2020
+:EXPORT_DATE: 2020-08-20
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Chile" :when "2020"
+:END:
+** Inspecciones proactivas con Ciencia de Datos
+:PROPERTIES:
+:EXPORT_FILE_NAME: uai-2020
+:EXPORT_DATE: 2020-06-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Universidad Adolfo Ibáñez" :when "2020"
+:END:
+** Proyectos de Ciencia de datos en Política Pública y triage
+:PROPERTIES:
+:EXPORT_FILE_NAME: triage-itam-2020
+:EXPORT_DATE: 2020-03-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "ITAM" :when "2020"
+:END:
+** Sistema de Intervención Temprana
+:PROPERTIES:
+:EXPORT_FILE_NAME: femsa-2020
+:EXPORT_DATE: 2020-02-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "FEMSA" :when "2020"
+:END:
+** Ciencia de datos para el bien social
+:PROPERTIES:
+:EXPORT_FILE_NAME: upa-2019
+:EXPORT_DATE: 2019-02-20
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "UPA" :when "2019"
+:END:
+** Implementación de Ciencia de datos en Organizaciones Públicas
+:PROPERTIES:
+:EXPORT_FILE_NAME: chile-2018
+:EXPORT_DATE: 2018-04-13
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Chile" :when "2018"
+:END:
+** Enterprise Architecture y Data Science: un camino en 2 sentidos
+:PROPERTIES:
+:EXPORT_FILE_NAME: dd-2017
+:EXPORT_DATE: 2017-06-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Data Day" :when "2017"
+:END:
 
 * Typography test
 :PROPERTIES:

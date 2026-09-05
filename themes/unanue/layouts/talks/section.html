@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="measure section" style="max-width: 760px;">
+  <h1>{{ .Title }}</h1>
+  <div class="intro">{{ .Content }}</div>
+  {{ with where $.Pages "Params.tier" "featured" }}
+  <div class="pubgroup" id="selected">
+    <span class="kicker">Selected</span>
+    {{ range .ByDate.Reverse }}{{ partial "talk.html" . }}{{ end }}
+  </div>
+  {{ end }}
+  {{/* everything not marked featured falls here, so a talk is never dropped */}}
+  {{ with where $.Pages "Params.tier" "!=" "featured" }}
+  <div class="pubgroup" id="earlier">
+    <span class="kicker">Earlier</span>
+    {{ range .ByDate.Reverse }}{{ partial "talk-brief.html" . }}{{ end }}
+  </div>
+  {{ end }}
+</div>
+{{ end }}
