@@ -6,10 +6,11 @@ operations research on national-scale infrastructure. Live at
 
 ## How it builds
 
-`site.org` is the single source: one org subtree per page, seven
-sections (about, writing, research, software, teaching, cases, talks)
-plus a CV page. ox-hugo exports it to `content/` (generated,
-gitignored), and Hugo builds the site with the `unanue` theme in
+Pages come from `site.org`, one org subtree per page: seven sections
+(about, writing, research, software, teaching, cases, talks) plus a CV
+page. Posts come from `writing/`, one org file per post. ox-hugo exports
+both to `content/` (generated, gitignored), and Hugo builds the site
+with the `unanue` theme in
 `themes/unanue/` — a custom navy-gold theme ported from the design
 canvas in `design/`.
 
@@ -22,7 +23,7 @@ depends on a personal Emacs configuration. Citations use org-cite with
 
 ```
 just setup    # install ox-hugo + citeproc into tools/elpa (first run)
-just export   # site.org → content/
+just export   # site.org and writing/*.org → content/
 just build    # export, then hugo --minify
 just serve    # export, then hugo server -D
 just deploy   # push main; GitHub Actions builds and publishes
@@ -60,6 +61,43 @@ ox-hugo export the children into the section page as well as into their
 own files, so every entry's prose appears twice. Research, Software and
 Cases all follow the three-level shape.
 
+**A post is one file in `writing/`.** The Writing section's intro stays
+in `site.org`; each post is `writing/<slug>.org`, exported as a whole
+file. The keywords do the work that subtree properties do in `site.org`:
+
+```org
+#+title: Post title
+#+author: Adolfo De Unánue
+#+date: 2026-09-13
+#+keywords: one "two words" three
+#+language: en
+#+options: toc:nil num:nil author:nil ^:nil tags:nil todo:nil prop:nil
+#+options: eval:never-export
+#+property: header-args :eval never-export :exports results
+#+hugo_base_dir: ..
+#+hugo_section: writing
+#+export_file_name: slug
+#+hugo_draft: true
+#+hugo_custom_front_matter: :layout "monograph"
+#+bibliography: ../references.bib
+#+cite_export: csl
+```
+
+- `toc:nil num:nil` are required. ox-hugo otherwise writes its own table
+  of contents into the post, duplicating the one the monograph layout
+  builds, and numbers every heading.
+- `#+keywords` becomes the `keywords` front matter list, split on spaces;
+  quote a keyword that contains one.
+- `#+export_file_name` sets the URL, so renaming the file does not.
+- `^:nil` keeps `as_of_date` from rendering as subscripts.
+- End a post that cites anything with `#+print_bibliography:`.
+
+**Drafts stay out of the repository.** It is public, and
+`#+hugo_draft: true` hides a page from the site, not from GitHub. An
+unfinished post is `writing/<slug>.draft.org`, which `.gitignore`
+excludes; `just serve` still renders it. To publish, rename it to
+`writing/<slug>.org`, set `#+hugo_draft: false`, then commit and push.
+
 **Margin notes** need `layout = "monograph"` in the page's front matter,
 which reserves a third column for them.
 
@@ -78,7 +116,7 @@ which reserves a third column for them.
   #+end_marginnote
   ```
 
-`content/writing/typography-test.md` is a draft page exercising both;
+`writing/typography-test.org` is a committed draft exercising both;
 `just serve` renders it, `just build` leaves it out.
 
 **Colour theme.** The palette follows the reader's system setting and a
@@ -103,7 +141,8 @@ untouched.
 ## Layout
 
 ```
-site.org              content source (edit this)
+site.org              page source (edit this)
+writing/              post sources, one org file per post; *.draft.org gitignored
 references.bib        bibliography for org-cite
 hugo.toml             Hugo configuration
 themes/unanue/        custom theme: layouts + assets/css/main.css

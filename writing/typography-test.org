@@ -1,0 +1,33 @@
+#+title: Typography test
+#+author: Adolfo De Unánue
+#+date: 2026-09-03
+#+keywords: typography "margin notes" fixture
+#+language: en
+#+options: toc:nil num:nil author:nil ^:nil tags:nil todo:nil prop:nil
+#+options: eval:never-export
+#+property: header-args :eval never-export :exports results
+#+hugo_base_dir: ..
+#+hugo_section: writing
+#+export_file_name: typography-test
+#+hugo_draft: true
+#+hugo_custom_front_matter: :layout "monograph"
+
+# A committed draft that exercises numbered and unnumbered margin notes.
+# `just serve' renders it; `just build' leaves it out.
+
+* First heading
+
+A paragraph with a numbered note attached to this
+clause[fn::W. Ross Ashby, /An Introduction to Cybernetics/ (1956), ch. 11.]
+and then it continues to the end.
+
+#+begin_marginnote
+An unnumbered note that belongs beside the paragraph.
+#+end_marginnote
+
+A second paragraph, with another note[fn::The claim concerns the class of
+maps a model can express after training, not its parameter count.] here.
+
+* Second heading
+
+Closing paragraph.

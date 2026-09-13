@@ -26,4 +26,19 @@ Thumbs.db
 .env
 .env.local
 
+# Claude Code hook logs
+/logs/
+
+# Unfinished posts: the repository is public, so drafts stay out of it.
+# Publishing renames writing/<slug>.draft.org to writing/<slug>.org.
+writing/*.draft.org
+
+# Claude Code session-local files (never committed)
+CLAUDE.md
+TODO.org
+TODO.org_*
+ai-docs/
+GIT_REMOTE
+specs/
+
 /.quarto/

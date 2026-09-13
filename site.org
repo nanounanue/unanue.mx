@@ -740,29 +740,3 @@ model but naming the decision and the action it enables.
 :EXPORT_DATE: 2017-06-01
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Data Day" :when "2017"
 :END:
-
-* Typography test
-:PROPERTIES:
-:EXPORT_HUGO_SECTION: writing
-:EXPORT_FILE_NAME: typography-test
-:EXPORT_DATE: 2026-09-03
-:EXPORT_HUGO_DRAFT: true
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :layout "monograph"
-:END:
-
-** First heading
-
-A paragraph with a numbered note attached to this
-clause[fn::W. Ross Ashby, /An Introduction to Cybernetics/ (1956), ch. 11.]
-and then it continues to the end.
-
-#+begin_marginnote
-An unnumbered note that belongs beside the paragraph.
-#+end_marginnote
-
-A second paragraph, with another note[fn::The claim concerns the class of
-maps a model can express after training, not its parameter count.] here.
-
-** Second heading
-
-Closing paragraph.
