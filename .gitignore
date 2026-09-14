@@ -33,6 +33,10 @@ Thumbs.db
 # Publishing renames writing/<slug>.draft.org to writing/<slug>.org.
 writing/*.draft.org
 
+# Content pulled from the site until its owner approves publication.
+# Never exported, never committed; see the header of each file.
+held/
+
 # Claude Code session-local files (never committed)
 CLAUDE.md
 TODO.org
