@@ -69,6 +69,7 @@ file. The keywords do the work that subtree properties do in `site.org`:
 #+title: Post title
 #+author: Adolfo De Unánue
 #+date: 2026-09-13
+#+description: One or two sentences for search results and link previews.
 #+keywords: one "two words" three
 #+language: en
 #+options: toc:nil num:nil author:nil ^:nil tags:nil todo:nil prop:nil
@@ -89,6 +90,10 @@ file. The keywords do the work that subtree properties do in `site.org`:
 - `#+keywords` becomes the `keywords` front matter list, split on spaces;
   quote a keyword that contains one.
 - `#+export_file_name` sets the URL, so renaming the file does not.
+- `#+description` is what search results and link previews show. Without
+  it the page's opening text is used, cut at 200 characters.
+- A post with its own preview image adds `:images '("/img/slug.png")` to
+  `#+hugo_custom_front_matter`, with the file under `static/img/`.
 - `^:nil` keeps `as_of_date` from rendering as subscripts.
 - End a post that cites anything with `#+print_bibliography:`.
 
@@ -127,6 +132,15 @@ The dark tokens are written twice in `main.css`, once under
 share declarations across a media query and an attribute selector, so
 edit both.
 
+**Link previews.** `layouts/partials/meta.html` writes the description,
+the canonical URL, and the Open Graph and Twitter card tags on every page.
+Posts are `og:type` article; everything else is website. Pages without
+their own image use `static/og-default.png`, rendered from
+`design/social-preview-site.svg`; after editing the SVG, regenerate it
+with `rsvg-convert -w 1200 -h 630 design/social-preview-site.svg -o
+static/og-default.png`. `hugo.toml` keeps attribute quotes in the
+minified HTML, so checks like `grep 'rel="canonical"'` match.
+
 **The CV PDFs are copies.** `static/cv/adolfo-de-unanue-cv.pdf` and
 `-es.pdf` come from `../cv/unanue.pdf` and `../cv/unanue_es.pdf`. Copy
 them again when that repository rebuilds them.
@@ -147,6 +161,7 @@ references.bib        bibliography for org-cite
 hugo.toml             Hugo configuration
 themes/unanue/        custom theme: layouts + assets/css/main.css
 static/CNAME          the apex domain for GitHub Pages
+static/og-default.png default link-preview image
 static/cv/            CV PDFs, copied from ../cv
 design/               design canvas artboards and social preview images
 tools/                headless export scripts (install-packages.el, export.el)

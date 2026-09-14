@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#FBF9F3"/>
+  <text x="90" y="118" font-family="Menlo" font-size="22" letter-spacing="1.8"
+        fill="#8A6D1F">UNANUE.MX</text>
+  <text x="90" y="282" font-family="Palatino" font-size="90" fill="#0B1F3B">Adolfo De Unánue</text>
+  <rect x="90" y="340" width="124" height="7" fill="#C9A83C"/>
+  <text x="90" y="420" font-family="Palatino" font-size="40" fill="#6A6355">Machine learning and operations research</text>
+  <text x="90" y="476" font-family="Palatino" font-size="40" fill="#6A6355">on national-scale infrastructure</text>
+  <rect x="90" y="512" width="1020" height="2" fill="#EAE3D2"/>
+  <text x="90" y="560" font-family="Menlo" font-size="22" fill="#6A6355">Writing &#183; Research &#183; Software &#183; Teaching &#183; Cases &#183; Talks</text>
+</svg>

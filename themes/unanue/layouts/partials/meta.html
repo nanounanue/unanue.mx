@@ -1,0 +1,37 @@
+{{- /*
+Description, canonical URL and link-preview tags (Open Graph, Twitter card).
+
+Description: front matter `description` (#+description: in a post file,
+:EXPORT_DESCRIPTION: in a site.org subtree), else the page summary, else
+site.Params.description.
+Image: the first entry of front matter `images`, else static/og-default.png,
+whose source is design/social-preview-site.svg.
+*/ -}}
+{{- $description := .Description -}}
+{{- if not $description -}}
+  {{- $description = .Summary | plainify | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace | truncate 200 -}}
+{{- end -}}
+{{- if not $description -}}
+  {{- $description = printf "%s — %s" site.Title site.Params.description -}}
+{{- end -}}
+{{- $isArticle := and .IsPage (eq .Section "writing") -}}
+<meta name="description" content="{{ $description }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:type" content="{{ if $isArticle }}article{{ else }}website{{ end }}">
+<meta property="og:locale" content="{{ or site.Language.Locale "en" }}">
+{{- if and $isArticle (not .Date.IsZero) }}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+{{- end }}
+{{- with .Params.images }}
+<meta property="og:image" content="{{ index . 0 | absURL }}">
+{{- else }}
+<meta property="og:image" content="{{ "og-default.png" | absURL }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+{{- end }}
+<meta property="og:image:alt" content="{{ site.Title }}">
+<meta name="twitter:card" content="summary_large_image">
