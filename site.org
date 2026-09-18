@@ -414,10 +414,10 @@ reading first. The complete CV is available on request.
     :CUSTOM_ID: egap
     :END:
 
-Director of AI Research; previously Associate Dean. Founded the Centro
-de Ciencia de Datos e IA and the data science center that carries ML
-work from pilot to production, including its governance, explainability
-and monitoring. Projects have covered case management and domestic
+Senior Researcher and Director of the Centro de Ciencia de Datos (CCD);
+previously Associate Dean. Founded the Centro de Ciencia de Datos e IA
+and the data science center that carries ML work from pilot to
+production, including its governance, explainability and monitoring. Projects have covered case management and domestic
 violence risk for the Zacatecas prosecutor's office, pharmaceutical
 logistics, port and terminal operations, school siting in El Salvador,
 and nationwide 5G planning.
