@@ -394,8 +394,8 @@ institutions in Mexico, the United States, the United Kingdom, Chile and
 El Salvador, and before that built and ran data science teams in three
 startups and two banks.
 
-The PDF carries the complete record. This page carries the positions,
-the training, and the work worth reading first.
+This page carries the positions, the training, and the work worth
+reading first. The complete CV is available on request.
 
 #+begin_export html
 <div class="contact">
@@ -404,7 +404,6 @@ the training, and the work worth reading first.
   <div><span class="l">GitHub</span><a href="https://github.com/nanounanue">nanounanue</a></div>
   <div><span class="l">LinkedIn</span><a href="https://www.linkedin.com/in/nanounanue">nanounanue</a></div>
   <div><span class="l">ORCID</span><a href="https://orcid.org/0000-0003-3499-0965">0000-0003-3499-0965</a></div>
-  <div><span class="l">PDF</span><a href="/cv/adolfo-de-unanue-cv.pdf">English</a> <span class="sep">·</span> <a href="/cv/adolfo-de-unanue-cv-es.pdf">Español</a></div>
 </div>
 #+end_export
 

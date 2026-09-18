@@ -141,9 +141,9 @@ with `rsvg-convert -w 1200 -h 630 design/social-preview-site.svg -o
 static/og-default.png`. `hugo.toml` keeps attribute quotes in the
 minified HTML, so checks like `grep 'rel="canonical"'` match.
 
-**The CV PDFs are copies.** `static/cv/adolfo-de-unanue-cv.pdf` and
-`-es.pdf` come from `../cv/unanue.pdf` and `../cv/unanue_es.pdf`. Copy
-them again when that repository rebuilds them.
+**The site carries no CV PDF.** Every PDF in `../cv` prints a phone
+number, so the CV page is HTML only and the full CV goes out on request.
+Do not copy a PDF from `../cv` into `static/`.
 
 ## Deploy
 
@@ -162,7 +162,6 @@ hugo.toml             Hugo configuration
 themes/unanue/        custom theme: layouts + assets/css/main.css
 static/CNAME          the apex domain for GitHub Pages
 static/og-default.png default link-preview image
-static/cv/            CV PDFs, copied from ../cv
 design/               design canvas artboards and social preview images
 tools/                headless export scripts (install-packages.el, export.el)
 archive/quarto/       the retired Quarto scaffold, kept for reference
