@@ -316,7 +316,7 @@ interdisciplinary and systemic policy.
 :PROPERTIES:
 :EXPORT_FILE_NAME: ciencia-para-decidir
 :EXPORT_DATE: 2026-09-14
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :institution "EGobiernoyTP, Tec de Monterrey" :level "Graduate" :term "From 14 September 2026" :editions "Two previous editions" :forthcoming "t" :publishdate "2026-09-04"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :institution "EGobiernoyTP, Tec de Monterrey" :level "Graduate" :term "From 14 September 2026" :editions "Two previous editions" :publishdate "2026-09-04"
 :END:
 
 Energy, warming, health, logistics, quantum computing: the political and
@@ -513,7 +513,7 @@ Workshops, conference talks and briefings since 2017, most recent first.
 :PROPERTIES:
 :EXPORT_FILE_NAME: quien-escribe-la-funcion-objetivo
 :EXPORT_DATE: 2026-09-09
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :tier "featured" :venue "A3 México Business Forum, Querétaro" :when "9 September 2026" :forthcoming "t" :publishdate "2026-09-04"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :tier "featured" :venue "A3 México Business Forum, Querétaro" :when "9 September 2026" :publishdate "2026-09-04"
 :END:
 
 Who decides what an artificial intelligence should optimise? Advanced
