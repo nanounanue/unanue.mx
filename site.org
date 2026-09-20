@@ -32,7 +32,10 @@ footnote.
 :EXPORT_FILE_NAME: _index
 :END:
 
-I work where optimization meets public infrastructure: ports, hospital
+I am Research Professor and Head of the Data Science and AI Centre
+(Centro de Ciencia de Datos e Inteligencia Artificial) at the School of
+Government and Public Transformation, Tecnológico de Monterrey. I work
+where optimization meets public infrastructure: ports, hospital
 supply chains, electoral networks. Every objective function in those
 systems encodes a political choice about who waits and who is served
 first; my work is to make that choice explicit, measurable, and open
@@ -292,7 +295,7 @@ Data Science for Social Good fellowship.
 :PROPERTIES:
 :EXPORT_FILE_NAME: eo5025
 :EXPORT_DATE: 2026-06-30
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :institution "Tec de Monterrey" :level "Graduate, EO5025" :term "April–June 2026"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :institution "Tec de Monterrey" :level "Graduate, EO5025" :term "April–July 2026"
 :END:
 
 Operations research for national infrastructure networks, taught through
@@ -329,7 +332,7 @@ people who are about to.
 :PROPERTIES:
 :EXPORT_FILE_NAME: inspecciones
 :EXPORT_DATE: 2022-10-13
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :term "October 2022" :editions "Three editions, 2021–2022"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :term "October 2022" :editions "Three editions, 2021–2023"
 :END:
 
 The state must verify that people and firms comply with far more rules
@@ -414,10 +417,11 @@ reading first. The complete CV is available on request.
     :CUSTOM_ID: egap
     :END:
 
-Senior Researcher and Director of the Centro de Ciencia de Datos (CCD);
-previously Associate Dean. Founded the Centro de Ciencia de Datos e IA
-and the data science center that carries ML work from pilot to
-production, including its governance, explainability and monitoring. Projects have covered case management and domestic
+Research Professor and Head of the Data Science and AI Centre (Centro de
+Ciencia de Datos e Inteligencia Artificial, CCD) since 2025; Director of
+Research and Faculty of the School from 2020 to 2025. Founded the CCD in
+2023; it carries ML work from pilot to production, including its
+governance, explainability and monitoring. Projects have covered case management and domestic
 violence risk for the Zacatecas prosecutor's office, pharmaceutical
 logistics, port and terminal operations, school siting in El Salvador,
 and nationwide 5G planning.
@@ -436,20 +440,23 @@ emergency medical services placement, school dropout prevention,
 diabetes screening, HIV care retention, homelessness prevention, housing
 safety, inspection prioritization, police early warning, suicide
 lifeline routing, pollution enforcement, urban mobility and transport
-equity. Co-created Aequitas, a fairness auditing toolkit, and Triage, a
-framework for developing and operating ML models --- both since adopted
-by government and nonprofit programs.
+equity. Co-developed Triage, a framework for developing and operating ML
+models that government and nonprofit programs have since adopted, and
+contributed to Aequitas, a fairness auditing toolkit.
 
-*** ITAM --- 2019 to 2020
+*** ITAM --- 2013 to 2020
 
-Director of the Centro de Ciencia de Datos and of the MSc in Data
-Science, the first such program in Latin America.
+Researcher and Director of the MSc in Data Science, the first graduate
+program in data science in Mexico; on leave from 2017 to 2019 while at
+the University of Chicago. Founding director of the Centro de Ciencia de
+Datos, 2019 to 2020.
 
 *** Open Intelligence, Datank and Sm4rt Predictive --- 2011 to 2017
 
-Co-founder and CTO, chief of machine intelligence, and lead data
-scientist across three ventures. Built production data products adopted
-by agencies and consultancies, and stood up a bank's first fraud data
+Co-founder and CTO of Open Intelligence, co-founder and chief of machine
+intelligence at Datank, and lead data scientist at Sm4rt Predictive
+Systems. Built production data products adopted by agencies and
+consultancies, and at Sm4rt stood up a bank's first fraud data
 warehouse, which cut detection time from weeks to under one week and
 reduced the rule set by roughly ninety percent.
 
@@ -492,8 +499,8 @@ reduced the rule set by roughly ninety percent.
 
 ** Also
 
-Invited as an expert on AI regulation by the Mexican Congress and Senate
-in 2025. Endeavor Global Entrepreneur, 2014. Preprints and software are
+Invited as an expert on AI regulation by the Mexican Senate and Chamber
+of Deputies in 2025 and 2026. Endeavor Global Entrepreneur, 2014. Preprints and software are
 listed under [[/research/][research]] and [[/software/][software]].
 
 * Talks
@@ -564,11 +571,11 @@ modelled efficiently by classical algorithms, it closes on what that
 makes programmable, auditable and measurable in public policy, with the
 Corredor Interoceánico as the worked case.
 
-** Los LLM como preservadores de variedad
+** Una discusión sobre diseño de aplicaciones con LLMs y agentes: estabilidad, adaptabilidad y complejidad
 :PROPERTIES:
 :EXPORT_FILE_NAME: llms-preservadores-de-variedad
-:EXPORT_DATE: 2024-11-01
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :tier "featured" :venue "Data Day" :when "2024"
+:EXPORT_DATE: 2024-11-05
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :tier "featured" :venue "Data Day Monterrey" :when "5 November 2024"
 :END:
 
 Read through Lyapunov stability, Prigogine's dissipative structures and
@@ -705,6 +712,6 @@ model but naming the decision and the action it enables.
 ** Enterprise Architecture y Data Science: un camino en 2 sentidos
 :PROPERTIES:
 :EXPORT_FILE_NAME: dd-2017
-:EXPORT_DATE: 2017-06-01
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Data Day" :when "2017"
+:EXPORT_DATE: 2017-03-28
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Data Day México" :when "28 March 2017"
 :END:
