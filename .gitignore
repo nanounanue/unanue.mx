@@ -44,5 +44,9 @@ TODO.org_*
 ai-docs/
 GIT_REMOTE
 specs/
+working-outline.md
+.project
+handoff-trace.log
+README.org
 
 /.quarto/
