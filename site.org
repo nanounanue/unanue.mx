@@ -631,13 +631,13 @@ model but naming the decision and the action it enables.
 :EXPORT_DATE: 2022-03-29
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Data Day" :when "2022"
 :END:
-** Ciencia de datos en políticas públicas: retos y perspectivas
+** El uso de ciencia de datos en política pública
 :PROPERTIES:
 :EXPORT_FILE_NAME: datapub-2022
-:EXPORT_DATE: 2022-01-01
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "DataPub" :when "2022"
+:EXPORT_DATE: 2022-06-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "The Data Pub" :when "June 2022"
 :END:
-** Ya tengo un modelo, ¿ahora qué hago?
+** Ya tengo un modelo. ¿Y ahora qué hago con él?
 :PROPERTIES:
 :EXPORT_FILE_NAME: dd-2021
 :EXPORT_DATE: 2021-11-01
