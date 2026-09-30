@@ -8,6 +8,10 @@ enableRobotsTXT = true
   # Fallback description for pages with neither a description nor a summary;
   # rendered as "<title> — <description>". See layouts/partials/meta.html.
   description = "data science, machine learning, and operations research on national-scale infrastructure."
+  # Author of every page: <meta name="author">, and article:author on posts.
+  # Set here, not in front matter: post headers carry author:nil, so ox-hugo
+  # exports no author field. See layouts/partials/meta.html.
+  author = "Adolfo De Unánue"
   # GoatCounter account name only — the part before .goatcounter.com.
   # Empty means no analytics script is emitted at all.
   goatcounter = "nanounanue"

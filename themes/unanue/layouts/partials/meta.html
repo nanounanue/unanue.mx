@@ -6,6 +6,8 @@ Description: front matter `description` (#+description: in a post file,
 site.Params.description.
 Image: the first entry of front matter `images`, else static/og-default.png,
 whose source is design/social-preview-site.svg.
+Author: site.Params.author on every page; posts also get article:author,
+which Open Graph expects to be a profile URL, so it points at /about/.
 */ -}}
 {{- $description := .Description -}}
 {{- if not $description -}}
@@ -16,6 +18,9 @@ whose source is design/social-preview-site.svg.
 {{- end -}}
 {{- $isArticle := and .IsPage (eq .Section "writing") -}}
 <meta name="description" content="{{ $description }}">
+{{- with site.Params.author }}
+<meta name="author" content="{{ . }}">
+{{- end }}
 <link rel="canonical" href="{{ .Permalink }}">
 <meta property="og:site_name" content="{{ site.Title }}">
 <meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
@@ -25,6 +30,9 @@ whose source is design/social-preview-site.svg.
 <meta property="og:locale" content="{{ or site.Language.Locale "en" }}">
 {{- if and $isArticle (not .Date.IsZero) }}
 <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+{{- end }}
+{{- if $isArticle }}
+<meta property="article:author" content="{{ "about/" | absURL }}">
 {{- end }}
 {{- with .Params.images }}
 <meta property="og:image" content="{{ index . 0 | absURL }}">
