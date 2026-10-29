@@ -223,6 +223,7 @@ main { display: block; }
 .case-grid p { margin: 0; font-size: 17.5px; line-height: 1.72; }
 .case-figure { margin: 48px 0 0; }
 .case-figure figcaption { margin-top: 10px; font-size: 14px; opacity: .75; }
+.case-hero { margin: 0 0 40px; }
 
 /* ── monograph (long-form essays) ────────────────────────────── */
 /* Three tracks: contents rail, text column, margin for the notes. The third
