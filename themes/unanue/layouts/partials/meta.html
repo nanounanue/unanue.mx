@@ -22,6 +22,11 @@ which Open Graph expects to be a profile URL, so it points at /about/.
 <meta name="author" content="{{ . }}">
 {{- end }}
 <link rel="canonical" href="{{ .Permalink }}">
+{{- if .IsTranslated }}
+{{- range .AllTranslations }}
+<link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ .Permalink }}">
+{{- end }}
+{{- end }}
 <meta property="og:site_name" content="{{ site.Title }}">
 <meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
 <meta property="og:description" content="{{ $description }}">

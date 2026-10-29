@@ -1,0 +1,8 @@
+# Strings the theme writes itself. Content is translated in the post files.
+contents = "Contenido"
+section_writing = "Escritos"
+# Go time layout: "January" and "2006" are tokens, "de" is literal
+date_month_year = "January de 2006"
+# the link to a translation is written in the language it leads to
+read_en = "Read in English"
+read_es = "Leer en español"

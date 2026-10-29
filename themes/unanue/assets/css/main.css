@@ -122,6 +122,9 @@ main { display: block; }
 }
 .rule { width: 72px; height: 2px; background: var(--gold-bright); margin: 44px 0 0; }
 .meta-line { font-family: var(--mono); font-size: 12.5px; color: var(--faint); }
+/* Bibliographies (org-cite, CSL): long DOIs and URLs wrap instead of widening
+   the page on a phone. */
+.csl-bib-body a { overflow-wrap: anywhere; }
 
 /* ── home ────────────────────────────────────────────────────── */
 .home h1 { font-size: 46px; line-height: 1.15; margin: 0; }

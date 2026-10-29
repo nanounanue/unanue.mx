@@ -28,3 +28,19 @@ enableRobotsTXT = true
   [markup.goldmark.renderer]
     # ox-hugo emits raw HTML for org constructs; goldmark must keep it
     unsafe = true
+
+# A post may have a Spanish translation: writing/<slug>.es.org exports to
+# content/writing/<slug>.es.md and is served at /es/writing/<slug>/. English
+# stays at the root. The Spanish site has no home, section or feed pages of
+# its own, only translated posts and their sitemap; Hugo also writes a
+# redirect from /en/ to /.
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+[languages.en]
+  weight = 1
+  languageName = "English"
+[languages.es]
+  weight = 2
+  languageCode = "es-MX"
+  languageName = "Español"
+  disableKinds = ["home", "section", "taxonomy", "term", "rss"]

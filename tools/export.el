@@ -11,6 +11,12 @@
 (setq package-user-dir (expand-file-name "elpa" (file-name-directory load-file-name)))
 (package-initialize)
 (require 'ox-hugo)
+;; Citation locales: Org bundles only en-US, so a post in Spanish would get
+;; English connectors ("and", "accessed"). tools/csl holds en-US and es-ES
+;; from the Citation Style Language locales repository (CC BY-SA 3.0).
+(require 'oc-csl)
+(setq org-cite-csl-locales-dir
+      (expand-file-name "csl" (file-name-directory load-file-name)))
 (let* ((root (expand-file-name ".." (file-name-directory load-file-name)))
        (site-org (expand-file-name "site.org" root))
        (writing (expand-file-name "writing" root)))

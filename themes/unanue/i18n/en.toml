@@ -1,0 +1,7 @@
+# Strings the theme writes itself. Content is translated in the post files.
+contents = "Contents"
+section_writing = "Writing"
+date_month_year = "January 2006"
+# the link to a translation is written in the language it leads to
+read_en = "Read in English"
+read_es = "Leer en español"

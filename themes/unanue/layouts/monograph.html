@@ -1,13 +1,14 @@
 {{ define "main" }}
 <div class="monograph">
   <div class="toc">
-    <span class="kicker">Contents</span>
+    <span class="kicker">{{ T "contents" }}</span>
     {{ .TableOfContents }}
   </div>
   <article>
-    {{ with .Section }}<span class="kicker">{{ title . }}</span>{{ end }}
+    {{ with .Section }}<span class="kicker">{{ T (printf "section_%s" .) | default (title .) }}</span>{{ end }}
     <h1>{{ .Title }}</h1>
-    {{ if not .Date.IsZero }}<div class="meta-line">{{ .Date.Format "January 2006" }}</div>{{ end }}
+    {{ if not .Date.IsZero }}<div class="meta-line">{{ .Date | time.Format (T "date_month_year") }}</div>{{ end }}
+    {{ range .Translations }}<div class="meta-line"><a href="{{ .RelPermalink }}" hreflang="{{ .Language.LanguageCode }}" lang="{{ .Language.LanguageCode }}">{{ T (printf "read_%s" .Lang) | default .Language.LanguageName }}</a></div>{{ end }}
     <div class="content" style="margin-top: 28px;">{{ partial "sidenotes.html" .Content }}</div>
   </article>
 </div>
