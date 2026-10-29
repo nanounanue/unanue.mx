@@ -49,10 +49,20 @@ Positions, training and a selected record of the work are on the
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: writing
 :EXPORT_FILE_NAME: _index
+:EXPORT_DESCRIPTION: Essays and worked analyses on models, simulators and the software that runs them.
 :END:
 
 Essays and worked analyses on models, simulators and the software that
 runs them. Some posts also appear in Spanish.
+
+Some posts can be read at five levels of detail. Press 1 to 5, or use the
+Zoom bar at the bottom right of the page. Full is the post as written, and
+Brief keeps a few of each paragraph's own sentences. Key, Takeaway and Topic
+are summaries written with a language model, down to a one-screen map of the
+sections. Click a paragraph to read it in full, and press Esc to fold it back.
+The five levels and their names come from Xia Chen's
+[[https://github.com/chenxiachan/textfold][TextFold]], which folds papers and
+web pages the same way.
 
 * Research
 :PROPERTIES:
