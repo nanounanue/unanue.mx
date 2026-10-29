@@ -44,8 +44,8 @@ first; my work is to make that choice explicit, measurable, and open
 to argument.
 
 Positions, training and a selected record of the work are on the
-[[/cv/][CV page]]. Write to
-[[mailto:adolfo@unanue.mx][adolfo@unanue.mx]].
+[[/cv/][CV page]]. To get in touch, message me on
+[[https://www.linkedin.com/in/nanounanue][LinkedIn]].
 
 * Writing
 :PROPERTIES:
@@ -425,11 +425,11 @@ El Salvador, and before that built and ran data science teams in three
 startups and two banks.
 
 This page carries the positions, the training, and the work worth
-reading first. The complete CV is available on request.
+reading first. The complete CV is available on request through
+[[https://www.linkedin.com/in/nanounanue][LinkedIn]].
 
 #+begin_export html
 <div class="contact">
-  <div><span class="l">Email</span><a href="mailto:adolfo@unanue.mx">adolfo@unanue.mx</a></div>
   <div><span class="l">Based in</span><span>Mexico City, Mexico</span></div>
   <div><span class="l">GitHub</span><a href="https://github.com/nanounanue">nanounanue</a></div>
   <div><span class="l">LinkedIn</span><a href="https://www.linkedin.com/in/nanounanue">nanounanue</a></div>
