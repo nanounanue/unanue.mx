@@ -380,8 +380,14 @@ warning [cite:@villalobos2026container].
   <div class="label kicker">Method</div>
   <p>Two supervised models: which containers will request pre-clearance service, and how long each container will dwell in the yard. Features draw on consignee history and cargo classification rather than weather-and-seasonality generalities.</p>
   <div class="label kicker">Result</div>
-  <p>Service prediction reached 75&thinsp;% precision and up to 80&thinsp;% recall on the top-300 ranking, against 25&thinsp;% and 30&thinsp;% for the rules in force; the preprint estimates that placement informed by these models avoids 13&thinsp;% to 23&thinsp;% of total handling operations (arXiv:2604.06251, §7.5). The next step — the optimizer that turns predictions into yard positions and gate appointments — is what the models exist for.</p>
+  <p>Service prediction reached 75&thinsp;% precision and up to 80&thinsp;% recall on the top-300 ranking, against 25&thinsp;% and 30&thinsp;% for the rules in force; the preprint estimates that placement informed by these models avoids 13&thinsp;% to 23&thinsp;% of total handling operations (arXiv:2604.06251, §7.5).</p>
+  <div class="label kicker">Simulation</div>
+  <p>That estimate is now being measured. A discrete-event simulator of the terminal's import yard, run on synthetic containers calibrated to its operations, places every arriving container under a stacking policy and logs every crane move. Each policy is compared with the rule in force on the same random arrivals, and a run counts only after database checks confirm that no container was lost, no slot held two, and no prediction changed after placement. The measured results will appear in the revised preprint.</p>
 </div>
+<figure class="case-figure">
+  <a href="/images/cases/container-terminal-replay.jpg"><img src="/images/cases/container-terminal-replay.jpg" alt="The simulator's replay view: a top-down map of thirty yard blocks, the move log at the playhead, and a 3D view of the container stacks with one container highlighted." loading="lazy"></a>
+  <figcaption>Replay of a simulated run, rebuilt from its move log. Synthetic containers; no terminal data.</figcaption>
+</figure>
 #+end_export
 
 * CV

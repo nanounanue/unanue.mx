@@ -221,6 +221,8 @@ main { display: block; }
 .cv .content ul li strong { color: var(--ink); }
 .cv .content table td:first-child { font-family: var(--mono); font-size: 12.5px; color: var(--faint); white-space: nowrap; }
 .case-grid p { margin: 0; font-size: 17.5px; line-height: 1.72; }
+.case-figure { margin: 48px 0 0; }
+.case-figure figcaption { margin-top: 10px; font-size: 14px; opacity: .75; }
 
 /* ── monograph (long-form essays) ────────────────────────────── */
 /* Three tracks: contents rail, text column, margin for the notes. The third
