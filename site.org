@@ -32,9 +32,11 @@ footnote.
 :EXPORT_FILE_NAME: _index
 :END:
 
-I am Research Professor and Head of the Data Science and AI Centre
-(Centro de Ciencia de Datos e Inteligencia Artificial) at the School of
-Government and Public Transformation, Tecnológico de Monterrey. I work
+Since 2025 I have worked independently as a fractional CTO and AI
+consultant. Until October 2026 I was Research Professor and Head of the
+Data Science and AI Centre (Centro de Ciencia de Datos e Inteligencia
+Artificial), which I founded in 2023 at the School of Government and
+Public Transformation, Tecnológico de Monterrey. I work
 where optimization meets public infrastructure: ports, hospital
 supply chains, electoral networks. Every objective function in those
 systems encodes a political choice about who waits and who is served
@@ -437,25 +439,32 @@ reading first. The complete CV is available on request.
 
 ** Positions
 
-*** Escuela de Gobierno y Transformación Pública, Tecnológico de Monterrey --- 2020 to present
+*** Escuela de Gobierno y Transformación Pública, Tecnológico de Monterrey --- 2020 to 2026
     :PROPERTIES:
     :CUSTOM_ID: egap
     :END:
 
 Research Professor and Head of the Data Science and AI Centre (Centro de
-Ciencia de Datos e Inteligencia Artificial, CCD) since 2025; Director of
-Research and Faculty of the School from 2020 to 2025. Founded the CCD in
-2023; it carries ML work from pilot to production, including its
-governance, explainability and monitoring. Projects have covered case management and domestic
-violence risk for the Zacatecas prosecutor's office, pharmaceutical
-logistics, port and terminal operations, school siting in El Salvador,
-and nationwide 5G planning.
+Ciencia de Datos e Inteligencia Artificial, CCD); Director of Research
+and Faculty of the School from 2020 to 2025, leading about 30 people.
+Founded the CCD in 2023 and ran it with a team of six until October
+2026; it carried ML work from pilot to production, including its
+governance, explainability and monitoring. Projects covered case
+management and domestic violence risk for the Zacatecas prosecutor's
+office, pharmaceutical logistics, and port and terminal operations.
 
 *** Independent consulting --- 2025 to present
 
 Fractional CTO work for AI startups, machine learning advisory for
 early-stage ventures, and legal operations automation with language
 models and agentic workflows.
+
+*** Government consultancy (confidential client) --- 2023 to 2024
+
+Data science and optimization lead, under contract. Led the data science
+and optimization of a national 5G coverage plan for a spectrum auction,
+within a project led by a telecommunications engineer, and in 2024 the
+nationwide optimization of school locations, now delivered.
 
 *** DSaPP, University of Chicago, and DSSG at Carnegie Mellon and the Alan Turing Institute --- 2016 to 2022
 
@@ -476,11 +485,12 @@ program in data science in Mexico; on leave from 2017 to 2019 while at
 the University of Chicago. Founding director of the Centro de Ciencia de
 Datos, 2019 to 2020.
 
-*** Open Intelligence, Datank and Sm4rt Predictive --- 2011 to 2017
+*** Dialetheia, OPI Analytics, Datank and Sm4rt Predictive --- 2008 to 2017
 
-Co-founder and CTO of Open Intelligence, co-founder and chief of machine
-intelligence at Datank, and lead data scientist at Sm4rt Predictive
-Systems. Built production data products adopted by agencies and
+Co-founder of Dialetheia (2008 to 2010); co-founder, CTO and chief data
+scientist of OPI Analytics (founded 2013, Endeavor 2014); co-founder and
+chief of machine intelligence at Datank; and lead data scientist at
+Sm4rt Predictive Systems. Built production data products adopted by agencies and
 consultancies, and at Sm4rt stood up a bank's first fraud data
 warehouse, which cut detection time from weeks to under one week and
 reduced the rule set by roughly ninety percent.
@@ -499,8 +509,9 @@ reduced the rule set by roughly ninety percent.
 
 - *Logistics and infrastructure.* Terminal and port optimization
   (Mexico, ITESM); pharmaceutical logistics (ITESM); emergency medical
-  services placement (Cincinnati, UChicago); school siting (El Salvador,
-  ITESM); nationwide 5G design (El Salvador, ITESM); urban mobility
+  services placement (Cincinnati, UChicago); school siting and
+  nationwide 5G design (confidential government client, own
+  consultancy); urban mobility
   (Seattle, UChicago).
 - *Health and social services.* Proactive diabetes screening (Chicago,
   UChicago); HIV care retention (Chicago, UChicago); vaccination
