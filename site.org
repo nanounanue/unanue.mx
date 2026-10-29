@@ -51,7 +51,8 @@ Positions, training and a selected record of the work are on the
 :EXPORT_FILE_NAME: _index
 :END:
 
-Essays and posts. The first pieces arrive with the site.
+Essays and worked analyses on models, simulators and the software that
+runs them. Some posts also appear in Spanish.
 
 * Research
 :PROPERTIES:

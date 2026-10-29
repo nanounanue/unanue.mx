@@ -3,6 +3,9 @@ languageCode = "en"
 title = "Adolfo De Unánue"
 theme = "unanue"
 enableRobotsTXT = true
+# Front-matter dates carry no offset. Without this they are read as UTC
+# midnight, and LinkedIn shows a post as published the evening before.
+timeZone = "America/Mexico_City"
 
 [params]
   # Fallback description for pages with neither a description nor a summary;
