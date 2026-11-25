@@ -256,7 +256,7 @@ pipeline reaches production without moving anything out of it.
 :PROPERTIES:
 :EXPORT_FILE_NAME: triage-pg
 :EXPORT_DATE: 2026-08-26
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :lang "Python + SQL" :license "MIT" :version "1.1.5" :doi "10.5281/zenodo.22292553" :repo "https://github.com/ccd-ia/triage-pg" :docs "https://ccd-ia.github.io/triage-pg/" :built_for "Case triage at a state prosecutor’s office; early-warning pilots in health and education."
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :lang "Python + SQL" :license "MIT" :version "1.6.4" :doi "10.5281/zenodo.22292553" :repo "https://github.com/ccd-ia/triage-pg" :docs "https://ccd-ia.github.io/triage-pg/" :built_for "Case triage at a state prosecutor’s office; early-warning pilots in health and education."
 :END:
 
 Temporal machine learning for public policy, end to end inside
@@ -269,7 +269,7 @@ holds the data, so a pipeline moves to production without leaving it.
 :PROPERTIES:
 :EXPORT_FILE_NAME: featurizer
 :EXPORT_DATE: 2026-08-15
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :lang "Python + SQL" :license "Apache-2.0" :version "1.1.1" :doi "10.5281/zenodo.22287185" :repo "https://github.com/ccd-ia/featurizer" :docs "https://ccd-ia.github.io/featurizer/" :built_for "The feature layer under the triage-pg pipelines above."
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :lang "Python + SQL" :license "Apache-2.0" :version "1.5.0" :doi "10.5281/zenodo.22287185" :repo "https://github.com/ccd-ia/featurizer" :docs "https://ccd-ia.github.io/featurizer/" :built_for "The feature layer under the triage-pg pipelines above."
 :END:
 
 Deep Feature Synthesis compiled to SQL. Given a relational schema and an
@@ -643,6 +643,72 @@ against the decisions they can actually change, with centaurs —
 human-and-model pairings — as the working unit. The hard part is not the
 model but naming the decision and the action it enables.
 
+** Multi-echelon inventory optimization for a national health network
+:PROPERTIES:
+:EXPORT_FILE_NAME: seminario-inventarios-2026
+:EXPORT_DATE: 2026-05-08
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Friday seminar, EGobiernoyTP, Tec de Monterrey" :when "8 May 2026"
+:END:
+** Construyendo una administración pública para los nuevos tiempos: la infraestructura informática del Estado
+:PROPERTIES:
+:EXPORT_FILE_NAME: camara-diputados-2026-04
+:EXPORT_DATE: 2026-04-04
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Chamber of Deputies, Mexico City" :when "4 April 2026"
+:END:
+** Ciencia de datos e IA para el desarrollo metropolitano
+:PROPERTIES:
+:EXPORT_FILE_NAME: camara-diputados-2026-03
+:EXPORT_DATE: 2026-03-25
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Metropolitan Areas Commission, Chamber of Deputies, Mexico City" :when "25 March 2026"
+:END:
+** Public interview with Audrey Tang
+:PROPERTIES:
+:EXPORT_FILE_NAME: audrey-tang-2026
+:EXPORT_DATE: 2026-03-04
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Opening lecture of the 2026 academic year, Tec de Monterrey, Mexico City" :when "4 March 2026"
+:END:
+** Fundamentos de investigación de operaciones y programación lineal
+:PROPERTIES:
+:EXPORT_FILE_NAME: seminario-io-2026
+:EXPORT_DATE: 2026-02-05
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Centro de Ciencia de Datos seminar series" :when "5 February 2026"
+:END:
+** Ética, selección e interpretación de modelos de ML
+:PROPERTIES:
+:EXPORT_FILE_NAME: seminario-etica-ml-2025
+:EXPORT_DATE: 2025-09-23
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Centro de Ciencia de Datos seminar series" :when "23 September 2025"
+:END:
+** Masterclass on artificial intelligence in public policy for federal legislators
+:PROPERTIES:
+:EXPORT_FILE_NAME: masterclass-legisladores-2025
+:EXPORT_DATE: 2025-09-09
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Tec de Monterrey, Mexico City" :when "9 September 2025"
+:END:
+** Gobernar el futuro: IA en la toma de decisiones públicas
+:PROPERTIES:
+:EXPORT_FILE_NAME: gobernar-el-futuro-2025
+:EXPORT_DATE: 2025-05-22
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Noches de Posgrado, EGobiernoyTP, Monterrey" :when "22 May 2025"
+:END:
+** Innovación con IA: prioridades para México
+:PROPERTIES:
+:EXPORT_FILE_NAME: congreso-ia-2025
+:EXPORT_DATE: 2025-04-09
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Congreso Internacional de Inteligencia Artificial, Chamber of Deputies and IPN, Mexico City" :when "9 April 2025"
+:END:
+** Roles de la IA en seguridad pública, ciberseguridad y gestión de riesgos
+:PROPERTIES:
+:EXPORT_FILE_NAME: senado-2025
+:EXPORT_DATE: 2025-02-18
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Senate commission on AI in Mexico, Mexico City" :when "18 February 2025"
+:END:
+** Unlocking Data for Artificial Intelligence in Sri Lanka
+:PROPERTIES:
+:EXPORT_FILE_NAME: lirneasia-2024
+:EXPORT_DATE: 2024-12-07
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Keynote and panel, LIRNEasia, Colombo" :when "7 December 2024"
+:END:
 ** Some examples to get the conversation going
 :PROPERTIES:
 :EXPORT_FILE_NAME: sri-lanka-2024
@@ -655,11 +721,29 @@ model but naming the decision and the action it enables.
 :EXPORT_DATE: 2024-09-11
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Pink Elephant" :when "2024"
 :END:
+** Seminario para alcaldesas y alcaldes 2024
+:PROPERTIES:
+:EXPORT_FILE_NAME: seminario-alcaldes-2024
+:EXPORT_DATE: 2024-08-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Panel, Tec de Monterrey, Mexico City, Guadalajara and Monterrey" :when "August 2024"
+:END:
+** Diálogos basados en evidencia: sistemas de salud y equidad
+:PROPERTIES:
+:EXPORT_FILE_NAME: insp-2024
+:EXPORT_DATE: 2024-06-28
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Panel, Instituto Nacional de Salud Pública, Cuernavaca" :when "28 June 2024"
+:END:
 ** Descifrando la próxima década de las telecomunicaciones y la economía digital
 :PROPERTIES:
 :EXPORT_FILE_NAME: futuro-digital-2023
 :EXPORT_DATE: 2023-08-14
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Educación continua, Tec de Monterrey" :when "2023"
+:END:
+** Política regulatoria de la IA
+:PROPERTIES:
+:EXPORT_FILE_NAME: legal-tech-summit-2023
+:EXPORT_DATE: 2023-06-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :venue "Panel, Legal Tech Summit, Lawgic and Universidad de Guadalajara (online)" :when "2023"
 :END:
 ** Proyectos de Ciencia de datos en política pública
 :PROPERTIES:
