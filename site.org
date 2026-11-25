@@ -45,7 +45,9 @@ to argument.
 
 Positions, training and a selected record of the work are on the
 [[/cv/][CV page]]. To get in touch, message me on
-[[https://www.linkedin.com/in/nanounanue][LinkedIn]].
+[[https://www.linkedin.com/in/nanounanue][LinkedIn]]. Code is on
+[[https://github.com/nanounanue][GitHub]] and publications are on
+[[https://orcid.org/0000-0003-3499-0965][ORCID]].
 
 * Writing
 :PROPERTIES:
